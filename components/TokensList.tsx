@@ -37,30 +37,24 @@ export const TokensList = () => {
         onOpen: handleOpen,
     })
 
-    // Обработка пустого объекта {} - отправляем обратно {}
     useEffect(() => {
         if (!lastMessage?.data) return
 
         try {
             const parsed = JSON.parse(lastMessage.data as string)
 
-            // Если получили пустой объект, отправляем обратно пустой объект
             if (typeof parsed === "object" && parsed !== null && Object.keys(parsed).length === 0) {
                 sendJson({})
             }
-        } catch {
-            // Игнорируем ошибки парсинга для этой логики
-        }
+        } catch {}
     }, [lastMessage, sendJson])
 
-    // Обработка ответа на подключение и подписка на канал
     useEffect(() => {
         if (!lastMessage?.data || hasSubscribedRef.current) return
 
         try {
             const parsed = JSON.parse(lastMessage.data as string) as WebSocketConnectResponse
 
-            // Если получили ответ на connect, подписываемся на канал
             if (parsed.connect && !hasSubscribedRef.current) {
                 hasSubscribedRef.current = true
                 startTransition(() => {

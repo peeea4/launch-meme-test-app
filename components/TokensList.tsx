@@ -4,6 +4,8 @@ import { TokenItemDataType } from "@/types/token"
 import { useEffect, useCallback, useRef, useState, startTransition } from "react"
 
 import TokensTable from "./Table/TokensTable"
+import { LoaderFour } from "./ui/loader"
+import { PlaceholdersAndVanishInputDemo } from "./search-input"
 
 const WS_URL = "wss://launch.meme/connection/websocket"
 
@@ -75,16 +77,21 @@ export const TokensList = () => {
         Boolean(message?.push?.channel === "pumpfun-mintTokens")
     )
 
+    if (tokenMessages.length === 0)
+        return (
+            <div className="flex flex-col gap-4 items-center w-full px-4">
+                <div className="text-center text-3xl text-gray-500 py-8 w-full">
+                    <LoaderFour
+                        text={isSubscribed ? "Waiting for new tokens..." : "Connecting..."}
+                    />
+                </div>
+            </div>
+        )
+
     return (
         <div className="flex flex-col gap-4 items-center w-full px-4">
-            <div>Connection: {readyState === 1 ? 'Имеется': 'Сдох'}</div>
-            {tokenMessages.length === 0 ? (
-                <div className="text-center text-gray-500 py-8">
-                    {isSubscribed ? "Waiting for new tokens..." : "Connecting..."}
-                </div>
-            ) : (
-                <TokensTable tokens={tokenMessages} />
-            )}
+            <PlaceholdersAndVanishInputDemo />
+            <TokensTable tokens={tokenMessages} />
         </div>
     )
 }

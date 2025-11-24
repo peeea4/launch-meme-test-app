@@ -18,7 +18,7 @@ const TokensTable: FC<{ tokens: WebSocketPushMessage[] }> = ({ tokens }) => {
     }
 
     return (
-        <div className="w-full max-w-5xl">
+        <div className="w-full max-w-5xl bg-background/60 pt-8">
             <div className="[&>div]:rounded-sm [&>div]:border ">
                 <Table>
                     <TableHeader>

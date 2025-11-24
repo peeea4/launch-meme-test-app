@@ -1,8 +1,9 @@
+import { PlaceholdersAndVanishInputDemo } from "@/components/search-input"
 import { TokensList } from "@/components/TokensList"
 
 export default function Home() {
     return (
-        <div className="flex min-h-screen flex-col bg-background font-sans items-center">
+        <div className="flex min-h-screen flex-col font-sans items-center">
             <TokensList />
         </div>
     )

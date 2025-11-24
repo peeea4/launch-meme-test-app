@@ -9,17 +9,12 @@ type HeroTokenCardProps = {
 }
 
 export const HeroTokenCard = ({ tokenData }: any) => {
-    const { name, symbol, photo, description, priceUsd, volumeUsd, holders, progress, tokenType } =
-        tokenData
+    const { name, symbol, photo, description, priceUsd, volumeUsd, holders, tokenType } = tokenData
 
     const [priceUp, setPriceUp] = useState(true)
-    const [volumeUp, setVolumeUp] = useState(true)
-    const [holdersUp, setHoldersUp] = useState(true)
 
     useEffect(() => {
         setPriceUp(Math.random() > 0.5)
-        setVolumeUp(Math.random() > 0.5)
-        setHoldersUp(Math.random() > 0.5)
     }, [])
 
     const formatPriceWithSmallZeros = (num?: number) => {
@@ -52,7 +47,6 @@ export const HeroTokenCard = ({ tokenData }: any) => {
 
     return (
         <BackgroundGradient className="relative flex flex-col items-center border-[2.5px] overflow-hidden shadow-2xl bg-linear-to-br from-zinc-900 via-black to-zinc-800 rounded-[22px] p-4 h-full">
-            {/* Строка 1: Картинка + Название + Теги */}
             <div className="flex w-full items-start mb-2">
                 <img
                     src={photo || ""}
@@ -74,18 +68,16 @@ export const HeroTokenCard = ({ tokenData }: any) => {
                             Holders: {holders ?? 0}
                         </span>
                         <span className="bg-zinc-800 bg-opacity-70 text-xs rounded px-2 py-1 font-semibold text-white shadow">
-                            {volumeUp ? "Vol ↑" : "Vol ↓"}: {formatCurrency(volumeUsd)}
+                            Vol: {formatCurrency(volumeUsd)}
                         </span>
                     </div>
                 </div>
             </div>
-            {/* Строка 2: Описание */}
             {description && (
                 <p className="text-left text-zinc-300/80 mt-2 text-center drop-shadow-sm mb-2 w-full line-clamp-3">
                     {description}
                 </p>
             )}
-            {/* Строка 3: Прогресс */}
             <div className="w-full mt-2 mb-2">
                 <div className="flex items-center justify-between mb-1">
                     <span

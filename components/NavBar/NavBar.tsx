@@ -1,4 +1,4 @@
-import { MenuIcon, SearchIcon } from "lucide-react"
+import { MenuIcon } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import {

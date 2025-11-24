@@ -1,4 +1,3 @@
-import { PlaceholdersAndVanishInputDemo } from "@/components/search-input"
 import { TokensList } from "@/components/TokensList"
 
 export default function Home() {

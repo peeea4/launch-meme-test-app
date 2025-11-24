@@ -4,7 +4,6 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/ThemeProvider"
 
 import Navbar from "@/components/NavBar/NavBar"
-import CanvasCursor from "@/components/CanvasCursor"
 import { HeroBackground } from "@/components/hero-background"
 
 const geistSans = Geist({
@@ -46,7 +45,6 @@ export default function RootLayout({
                 >
                     <HeroBackground>
                         <main>
-                            {/* <CanvasCursor /> */}
                             <Navbar navigationData={navigationData} />
                             {children}
                         </main>

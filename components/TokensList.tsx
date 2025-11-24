@@ -37,7 +37,7 @@ export const TokensList = () => {
         })
     }, [])
 
-    const { lastMessage, sendJson, messages, readyState } = useWebSocket(WS_URL, {
+    const { lastMessage, sendJson, messages } = useWebSocket(WS_URL, {
         onOpen: handleOpen,
     })
 

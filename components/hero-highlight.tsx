@@ -103,38 +103,3 @@ export const HeroHighlight = ({
         </div>
     )
 }
-
-export const Highlight = ({
-    children,
-    className,
-}: {
-    children: React.ReactNode
-    className?: string
-}) => {
-    return (
-        <motion.span
-            initial={{
-                backgroundSize: "0% 100%",
-            }}
-            animate={{
-                backgroundSize: "100% 100%",
-            }}
-            transition={{
-                duration: 2,
-                ease: "linear",
-                delay: 0.7,
-            }}
-            style={{
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "left center",
-                display: "inline",
-            }}
-            className={cn(
-                `relative inline-block rounded-lg bg-gradient-to-r from-green-900 to-green-900 px-1 pb-1 dark:from-green-900 dark:to-green-900`,
-                className
-            )}
-        >
-            {children}
-        </motion.span>
-    )
-}

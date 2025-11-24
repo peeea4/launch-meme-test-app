@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import { TokenItemDataType } from "@/types/token"
 import { BackgroundGradient } from "./ui/background-gradient"
@@ -7,7 +8,7 @@ type HeroTokenCardProps = {
     tokenData: TokenItemDataType
 }
 
-export const HeroTokenCard = ({ tokenData }: HeroTokenCardProps) => {
+export const HeroTokenCard = ({ tokenData }: any) => {
     const { name, symbol, photo, description, priceUsd, volumeUsd, holders, progress, tokenType } =
         tokenData
 

@@ -1,9 +1,11 @@
-import { TokensList } from "@/components/TokensList"
+import HeroSection from "@/components/Hero"
 
 export default function Home() {
     return (
-        <div className="flex min-h-screen flex-col bg-background font-sans p-8">
-            <TokensList />
+        <div className="min-h-screen bg-background font-sans flex relative">
+            <main className="flex flex-col">
+                <HeroSection />
+            </main>
         </div>
     )
 }

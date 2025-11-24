@@ -2,9 +2,9 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/ThemeProvider"
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
-import { AppSidebar } from "@/components/AppSidebar"
-import { useIsMobile } from "@/hooks/use-mobile"
+
+import Navbar from "@/components/NavBar/NavBar"
+import CanvasCursor from "@/components/CanvasCursor"
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -15,6 +15,14 @@ const geistMono = Geist_Mono({
     variable: "--font-geist-mono",
     subsets: ["latin"],
 })
+
+const navigationData = [
+    {
+        title: "Home",
+        href: "/",
+        // icon: Home,
+    },
+]
 
 export const metadata: Metadata = {
     title: "launch.meme",
@@ -35,13 +43,11 @@ export default function RootLayout({
                     enableSystem
                     disableTransitionOnChange
                 >
-                    <SidebarProvider>
-                        <AppSidebar />
-                        <main>
-                            <SidebarTrigger />
-                            {children}
-                        </main>
-                    </SidebarProvider>
+                    <main>
+                        <CanvasCursor />
+                        <Navbar navigationData={navigationData} />
+                        {children}
+                    </main>
                 </ThemeProvider>
             </body>
         </html>

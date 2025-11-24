@@ -1,7 +1,9 @@
 "use client"
 import { useWebSocket } from "@/hooks/use-websocket"
+import { TokenItemDataType } from "@/types/token"
 import { useEffect, useCallback, useRef, useState, startTransition } from "react"
-import MintTokenCard, { type TokenItemDataType } from "./MintTokenCard"
+
+import TokensTable from "./Table/TokensTable"
 
 const WS_URL = "wss://launch.meme/connection/websocket"
 
@@ -33,7 +35,7 @@ export const TokensList = () => {
         })
     }, [])
 
-    const { lastMessage, sendJson, messages } = useWebSocket(WS_URL, {
+    const { lastMessage, sendJson, messages, readyState } = useWebSocket(WS_URL, {
         onOpen: handleOpen,
     })
 
@@ -61,6 +63,8 @@ export const TokensList = () => {
                     setIsSubscribed(true)
                 })
                 sendJson({ subscribe: { channel: "pumpfun-mintTokens" }, id: 2 })
+
+                sendJson({ subscribe: { channel: "pumpfun-tokenUpdates" }, id: 3 })
             }
         } catch (error) {
             console.error("Failed to parse connection response:", error)
@@ -68,26 +72,18 @@ export const TokensList = () => {
     }, [lastMessage, sendJson])
 
     const tokenMessages = messages.filter((message): message is WebSocketPushMessage =>
-        Boolean(message.push?.pub?.data)
+        Boolean(message?.push?.channel === "pumpfun-mintTokens")
     )
 
-    const getTokenKey = (data: TokenItemDataType, index: number): string => {
-        return `${data.creator}-${data.token}-${index}`
-    }
-
     return (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 items-center w-full px-4">
+            <div>Connection: {readyState === 1 ? 'Имеется': 'Сдох'}</div>
             {tokenMessages.length === 0 ? (
                 <div className="text-center text-gray-500 py-8">
                     {isSubscribed ? "Waiting for new tokens..." : "Connecting..."}
                 </div>
             ) : (
-                tokenMessages.map((message, index) => {
-                    const tokenData = message.push?.pub?.data
-                    if (!tokenData) return null
-
-                    return <MintTokenCard key={getTokenKey(tokenData, index)} {...tokenData} />
-                })
+                <TokensTable tokens={tokenMessages} />
             )}
         </div>
     )

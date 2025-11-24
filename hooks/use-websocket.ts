@@ -4,12 +4,11 @@ import { useEffect, useRef, useState, useCallback } from "react"
 
 type WebSocketMessage = {
     push?: {
+        channel?: string
         pub?: {
-            data?: unknown
+            data?: any
         }
     }
-    connect?: unknown
-    [key: string]: unknown
 }
 
 type WebSocketHookOptions = {
@@ -34,7 +33,12 @@ export function useWebSocket(
         typeof WebSocket === "undefined" ? 0 : WebSocket.CLOSED
     )
     const [lastMessage, setLastMessage] = useState<MessageEvent | null>(null)
+
+    // ✔ Храним отображаемые сообщения
     const [messages, setMessages] = useState<WebSocketMessage[]>([])
+
+    // ✔ Map для O(1) поиска токена
+    const indexMap = useRef<Map<string, number>>(new Map())
 
     const sendRaw = useCallback((raw: string) => {
         if (wsRef.current?.readyState === WebSocket.OPEN) {
@@ -49,54 +53,92 @@ export function useWebSocket(
     }, [])
 
     const disconnect = useCallback(() => {
-        if (reconnectTimeout.current) {
-            clearTimeout(reconnectTimeout.current)
-            reconnectTimeout.current = null
-        }
+        reconnectTimeout.current && clearTimeout(reconnectTimeout.current)
         wsRef.current?.close()
     }, [])
 
-    const connectRef = useRef<(() => void) | null>(null)
+    const connectRef = useRef<() => void>(() => {})
 
     const connect = useCallback(() => {
-        if (typeof window === "undefined") return
-        if (!url) return
+        if (typeof window === "undefined" || !url) return
 
         const ws = new WebSocket(url)
         wsRef.current = ws
 
         ws.onopen = () => {
             setReadyState(ws.readyState)
-            if (onOpenRef.current) {
-                onOpenRef.current(sendJson)
-            }
+            onOpenRef.current?.(sendJson)
         }
 
         ws.onmessage = (msg) => {
             setLastMessage(msg)
-            if (msg?.data) {
+            if (msg.data)
                 try {
                     const parsed = JSON.parse(msg.data) as WebSocketMessage
+                    if (!parsed?.push) return
 
-                    if (parsed?.push) {
-                        setMessages((prev) => [parsed, ...prev])
+                    const channel = parsed.push.channel
+                    const data = parsed.push.pub?.data
+                    const token = data?.token
+
+                    if (!token) return
+
+                    // -----------------------
+                    // 🟢 NEW TOKEN
+                    // -----------------------
+                    if (channel === "pumpfun-mintTokens") {
+                        setMessages((prev) => {
+                            const next = [parsed, ...prev]
+                            // записываем index в Map
+                            indexMap.current.set(token, 0)
+
+                            // сдвигаем индексы всех старых токенов
+                            for (const [t, i] of indexMap.current.entries()) {
+                                if (t !== token) {
+                                    indexMap.current.set(t, i + 1)
+                                }
+                            }
+
+                            return next
+                        })
+                    }
+
+                    // -----------------------
+                    // 🟡 UPDATE TOKEN
+                    // -----------------------
+                    if (channel === "pumpfun-tokenUpdates") {
+                        const idx = indexMap.current.get(token)
+                        if (idx === undefined) return
+
+                        setMessages((prev) => {
+                            const next = [...prev] // копия
+                            next[idx] = {
+                                ...next[idx],
+                                push: {
+                                    ...next[idx]?.push,
+                                    pub: {
+                                        ...next[idx]?.push?.pub,
+                                        data: {
+                                            ...next[idx]?.push?.pub?.data,
+                                            ...data, // только обновление
+                                        },
+                                    },
+                                },
+                            }
+                            return next
+                        })
                     }
                 } catch (error) {
-                    console.error("Failed to parse WebSocket message:", error)
+                    console.error("WS parse error:", error)
                 }
-            }
         }
 
-        ws.onerror = (error: Event) => {
-            console.error(error)
-            setReadyState(ws.readyState)
-        }
+        ws.onerror = () => setReadyState(ws.readyState)
 
-        ws.onclose = (event: CloseEvent) => {
-            console.log("WebSocket closed", event)
+        ws.onclose = () => {
             setReadyState(ws.readyState)
-            if (reconnect && connectRef.current) {
-                reconnectTimeout.current = setTimeout(connectRef.current, reconnectInterval)
+            if (reconnect) {
+                reconnectTimeout.current = setTimeout(connect, reconnectInterval)
             }
         }
     }, [url, reconnect, reconnectInterval, sendJson])
@@ -113,9 +155,9 @@ export function useWebSocket(
     return {
         readyState,
         lastMessage,
+        messages,
         sendJson,
         sendRaw,
         disconnect,
-        messages,
     }
 }

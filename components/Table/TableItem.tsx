@@ -107,7 +107,7 @@ const TableItem: FC<{ tokenData: TokenItemDataType }> = ({ tokenData }) => {
             <TableCell>
                 <div className="flex items-center gap-3">
                     <Avatar className="rounded-sm w-15 h-15">
-                        <AvatarImage src={photo} alt={name} />
+                        {photo && <AvatarImage src={photo} alt={name} />}
                     </Avatar>
                     <div>
                         <div className="font-medium">{name}</div>

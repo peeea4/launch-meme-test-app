@@ -1,5 +1,5 @@
 "use client"
-import { motion } from "motion/react"
+import { easeInOut, motion } from "motion/react"
 import { MenuIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
@@ -26,7 +26,7 @@ const pulseAnimation = {
         transition: {
             duration: 2,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: easeInOut,
         },
     },
     whileHover: {

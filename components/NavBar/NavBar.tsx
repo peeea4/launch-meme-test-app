@@ -5,14 +5,14 @@ import { Button } from "@/components/ui/button"
 import {
     DropdownMenu,
     DropdownMenuContent,
-    DropdownMenuGroup,
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Badge } from "@/components/ui/badge"
-import Logo from "./Logo"
+
 import NavLink from "./NavLink"
 import Link from "next/link"
+import { Logo } from "../Logo"
 
 type NavigationItem = {
     title: string
@@ -43,8 +43,10 @@ const Navbar = ({ navigationData }: { navigationData: NavigationItem }) => {
                     <Link href="/">
                         <Logo className="text-foreground gap-3" />
                     </Link>
-                    <NavLink href="/">Home</NavLink>
-                    <NavLink href="/tokens">
+                    <NavLink href="/" className="hidden lg:flex">
+                        Home
+                    </NavLink>
+                    <NavLink href="/tokens" className="hidden lg:flex">
                         Tokens
                         <div className="absolute top-[-10] right-[-20]">
                             <motion.div className="ml-1" {...pulseAnimation}>
@@ -57,31 +59,52 @@ const Navbar = ({ navigationData }: { navigationData: NavigationItem }) => {
                             </motion.div>
                         </div>
                     </NavLink>
-                    <NavLink href="/career">Career</NavLink>
-                    <NavLink href="/contacts">Contacts</NavLink>
+                    <NavLink href="/career" className="hidden lg:flex">
+                        Career
+                    </NavLink>
+                    <NavLink href="/contacts" className="hidden lg:flex">
+                        Contacts
+                    </NavLink>
                 </div>
 
-                <div className="flex font-medium text-muted-foreground">
+                <div className="hidden lg:flex font-medium text-muted-foreground items-center">
                     <NavLink href="/profile">Profile</NavLink>
-                    <NavLink href="/create-meme">Create Meme</NavLink>
+                    <motion.div
+                        initial={{ scale: 0.9, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        transition={{ duration: 0.4, ease: "easeOut" }}
+                    >
+                        <Link href="/create-meme">
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.06,
+                                    rotate: 1,
+                                    boxShadow: "0 0 12px oklch(0.541 0.281 293.009)",
+                                }}
+                                whileTap={{ scale: 0.96 }}
+                                className="relative inline-flex items-center gap-2 px-4 py-2 rounded-xl font-semibold bg-linear-to-r from-primary/20 to-primary text-white shadow-md"
+                            >
+                                Create Meme
+                                <span className="absolute inset-0 bg-white/20 rounded-xl blur-sm opacity-0 hover:opacity-40 transition-opacity" />
+                            </motion.div>
+                        </Link>
+                    </motion.div>
                 </div>
 
-                <div className="sm:hidden flex items-center gap-6">
+                <div className="lg:hidden flex items-center gap-6">
                     <DropdownMenu>
-                        <DropdownMenuTrigger className="md:hidden" asChild>
+                        <DropdownMenuTrigger className="lg:hidden" asChild>
                             <Button variant="outline" size="icon">
                                 <MenuIcon />
                                 <span className="sr-only">Menu</span>
                             </Button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent className="w-56" align="end">
-                            <DropdownMenuGroup>
-                                {navigationData.map((item, index) => (
-                                    <DropdownMenuItem key={index}>
-                                        <a href={item.href}>{item.title}</a>
-                                    </DropdownMenuItem>
-                                ))}
-                            </DropdownMenuGroup>
+                            {navigationData.map((item, index) => (
+                                <DropdownMenuItem key={index}>
+                                    <a href={item.href}>{item.title}</a>
+                                </DropdownMenuItem>
+                            ))}
                         </DropdownMenuContent>
                     </DropdownMenu>
                 </div>

@@ -26,7 +26,6 @@ export const HeroTokenCard: FC<HeroTokenCardProps> = ({ tokenData }) => {
         website,
         token,
     } = tokenData
-    console.log(tokenData)
 
     const formatCurrency = (num?: number) => {
         if (!num) return "$0.00"
@@ -43,7 +42,7 @@ export const HeroTokenCard: FC<HeroTokenCardProps> = ({ tokenData }) => {
     }
 
     return (
-        <Card className="h-100 w-100 rounded-3xl p-10 bg-background h-full">
+        <Card className="w-100 rounded-3xl p-10 bg-background h-full">
             <div className="flex w-full items-start">
                 <Image
                     src={photo || ""}

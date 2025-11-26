@@ -1,8 +1,9 @@
 import { cn } from "@/lib/utils"
-import { SparklesCore } from "../ui/sparkles"
-import { Coins } from "lucide-react"
 
-const Logo = ({ className }: { className?: string }) => {
+import { Coins } from "lucide-react"
+import { SparklesCore } from "./ui/sparkles"
+
+export const Logo = ({ className }: { className?: string }) => {
     return (
         <div className={cn("flex items-center gap-2.5 relative py-3", className)}>
             <div className="w-full absolute inset-0">
@@ -23,5 +24,3 @@ const Logo = ({ className }: { className?: string }) => {
         </div>
     )
 }
-
-export default Logo

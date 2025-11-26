@@ -58,14 +58,4 @@ function DropdownMenuItem({
     )
 }
 
-function DropdownMenuGroup({ ...props }: React.ComponentProps<typeof DropdownMenuPrimitive.Group>) {
-    return <DropdownMenuPrimitive.Group data-slot="dropdown-menu-group" {...props} />
-}
-
-export {
-    DropdownMenu,
-    DropdownMenuTrigger,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuGroup,
-}
+export { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem }

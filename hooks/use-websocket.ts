@@ -35,10 +35,8 @@ export function useWebSocket(
     )
     const [lastMessage, setLastMessage] = useState<MessageEvent | null>(null)
 
-    // ✔ Храним отображаемые сообщения
     const [messages, setMessages] = useState<WebSocketMessage[]>([])
 
-    // ✔ Map для O(1) поиска токена
     const indexMap = useRef<Map<string, number>>(new Map())
 
     const sendRaw = useCallback((raw: string) => {

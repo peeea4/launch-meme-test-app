@@ -3,7 +3,7 @@ import { useWebSocket } from "@/hooks/use-websocket"
 import { TokenItemDataType } from "@/types/token"
 import { startTransition, useCallback, useEffect, useRef, useState } from "react"
 
-import { SearchInput } from "./search-input"
+import { SearchInput } from "./SearchInput"
 import TokensTable from "./Table/TokensTable"
 import { LoaderFour } from "./ui/loader"
 
@@ -91,7 +91,7 @@ export const TokensList = () => {
         )
 
     return (
-        <div className="flex flex-col gap-4 items-center w-full px-4 pb-20">
+        <div className="flex flex-col gap-4 items-center w-full px-4">
             <SearchInput />
             <TokensTable tokens={tokenMessages} />
         </div>

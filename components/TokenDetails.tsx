@@ -11,22 +11,31 @@ import { StarsBackground } from "./ui/stars-background"
 import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "./ui/chart"
 
 const chartData = [
-    { month: "January", desktop: 186, mobile: 80 },
-    { month: "February", desktop: 305, mobile: 200 },
-    { month: "March", desktop: 237, mobile: 120 },
-    { month: "April", desktop: 73, mobile: 190 },
-    { month: "May", desktop: 209, mobile: 130 },
-    { month: "June", desktop: 214, mobile: 140 },
+    { month: "January", price: 50000000 },
+    { month: "February", price: 75000000 },
+    { month: "March", price: 68000000 },
+    { month: "April", price: 42000000 },
+    { month: "May", price: 60000000 },
+    { month: "June", price: 63000000 },
 ]
+
+const formatChartValue = (value: number): string => {
+    if (value >= 1_000_000_000) {
+        return (value / 1_000_000_000).toFixed(2) + "B"
+    }
+    if (value >= 1_000_000) {
+        return (value / 1_000_000).toFixed(2) + "M"
+    }
+    if (value >= 1_000) {
+        return (value / 1_000).toFixed(2) + "K"
+    }
+    return value.toString()
+}
 
 const chartConfig = {
     desktop: {
-        label: "Desktop",
+        label: "Market cap $",
         color: "var(--chart-1)",
-    },
-    mobile: {
-        label: "Mobile",
-        color: "var(--chart-2)",
     },
 } satisfies ChartConfig
 
@@ -65,10 +74,10 @@ export const TokenDetails = (props: Props) => {
 
     return (
         <div className="min-h-[calc(100vh-96px)] text-slate-100 px-6 py-10 z-10 relative">
-            <div className="max-w-7xl mx-auto grid grid-cols-12 gap-6 rounded-2xl border p-10 bg-card relative z-10">
+            <div className="max-w-7xl mx-auto flex flex-col md:grid grid-cols-12 gap-6 rounded-2xl border p-10 bg-card relative z-10">
                 <section className="col-span-8 space-y-6">
                     <Card className="bg-linear-to-br from-primary/1 to-primary/20 p-6 h-full">
-                        <div className="flex items-start gap-6 h-full">
+                        <div className="flex flex-col md:flex-row items-start gap-6 h-full">
                             <div className="w-40 h-40 relative flex-shrink-0 rounded-xl overflow-hidden ring-1 ring-white/10">
                                 <Image
                                     src={isValidImage ? photo! : FALLBACK_IMAGE}
@@ -91,7 +100,7 @@ export const TokenDetails = (props: Props) => {
                                     {description ?? "Description not provided."}
                                 </p>
 
-                                <div className="mt-4 flex items-center gap-4">
+                                <div className="mt-4 flex flex-col md:flex-row items-start md:items-center gap-4">
                                     <div className="flex flex-col">
                                         <span className="text-sm text-slate-400">Price</span>
                                         <div className="text-lg font-medium">
@@ -146,8 +155,8 @@ export const TokenDetails = (props: Props) => {
                                 data={chartData}
                                 margin={{
                                     top: 20,
-                                    left: 12,
-                                    right: 12,
+                                    left: 32,
+                                    right: 32,
                                 }}
                             >
                                 <CartesianGrid vertical={false} />
@@ -163,7 +172,7 @@ export const TokenDetails = (props: Props) => {
                                     content={<ChartTooltipContent indicator="line" />}
                                 />
                                 <Line
-                                    dataKey="desktop"
+                                    dataKey="price"
                                     type="natural"
                                     stroke="var(--color-desktop)"
                                     strokeWidth={2}
@@ -179,13 +188,46 @@ export const TokenDetails = (props: Props) => {
                                         offset={12}
                                         className="fill-foreground"
                                         fontSize={12}
+                                        formatter={formatChartValue}
                                     />
                                 </Line>
                             </LineChart>
                         </ChartContainer>
                     </CardContent>
                 </Card>
-                <Card className="col-span-7 bg-linear-to-br from-primary/15 to-primary/0"></Card>
+                <Card className="col-span-7 bg-linear-to-br from-primary/15 to-primary/0 p-6 rounded-2xl shadow-lg border border-primary/30">
+                    <h4 className="text-lg font-semibold text-slate-200 mb-5 border-b border-primary/40 pb-2">
+                        Token Metrics
+                    </h4>
+                    <div className="space-y-4 text-slate-300 text-sm">
+                        <div className="flex justify-between border-b border-primary/20 pb-2">
+                            <span>24h Trading Volume</span>
+                            <span className="font-mono font-semibold text-white">$14,500,000</span>
+                        </div>
+                        <div className="flex justify-between border-b border-primary/20 pb-2">
+                            <span>Market Share</span>
+                            <span className="font-mono font-semibold text-white">0.15%</span>
+                        </div>
+                        <div className="flex justify-between border-b border-primary/20 pb-2">
+                            <span>Transactions (24h)</span>
+                            <span className="font-mono font-semibold text-white">25,000</span>
+                        </div>
+                        <div className="flex justify-between border-b border-primary/20 pb-2">
+                            <span>Average Wallet Volume</span>
+                            <span className="font-mono font-semibold text-white">$500</span>
+                        </div>
+                        <div className="flex justify-between border-b border-primary/20 pb-2">
+                            <span>7d Price Change</span>
+                            <span className="font-mono font-semibold text-green-400">+3.45%</span>
+                        </div>
+                        <div className="flex justify-between">
+                            <span>Latest News</span>
+                            <span className="italic text-primary-light">
+                                New partnership announced
+                            </span>
+                        </div>
+                    </div>
+                </Card>
             </div>
             <ShootingStars />
             <StarsBackground />

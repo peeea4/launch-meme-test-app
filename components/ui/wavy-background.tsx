@@ -89,7 +89,6 @@ export const WavyBackground = ({
 
     const [isSafari, setIsSafari] = useState(false)
     useEffect(() => {
-        // I'm sorry but i have got to support it on safari.
         setIsSafari(
             typeof window !== "undefined" &&
                 navigator.userAgent.includes("Safari") &&
@@ -105,7 +104,7 @@ export const WavyBackground = ({
             )}
         >
             <canvas
-                className="absolute inset-0 z-0"
+                className="absolute inset-0 z-0 sm:max-w-xs md:max-w-7xl lg:max-w-max"
                 ref={canvasRef}
                 id="canvas"
                 style={{

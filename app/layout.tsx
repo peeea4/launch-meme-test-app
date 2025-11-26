@@ -1,8 +1,9 @@
+import { ThemeProvider } from "@/components/ThemeProvider"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
-import { ThemeProvider } from "@/components/ThemeProvider"
 
+import { Footer } from "@/components/Footer"
 import Navbar from "@/components/NavBar/NavBar"
 
 const geistSans = Geist({
@@ -19,6 +20,26 @@ const navigationData = [
     {
         title: "Home",
         href: "/",
+    },
+    {
+        title: "Tokens",
+        href: "/tokens",
+    },
+    {
+        title: "Career",
+        href: "/career",
+    },
+    {
+        title: "Contacts",
+        href: "/contacts",
+    },
+    {
+        title: "Profile",
+        href: "/profile",
+    },
+    {
+        title: "Create Meme",
+        href: "/create-meme",
     },
 ]
 
@@ -43,9 +64,7 @@ export default function RootLayout({
                 >
                     <Navbar navigationData={navigationData} />
                     {children}
-                    <footer className="h-[100px] w-full flex justify-center">
-                        <div className="max-w-7xl w-full">Footer</div>
-                    </footer>
+                    <Footer />
                 </ThemeProvider>
             </body>
         </html>

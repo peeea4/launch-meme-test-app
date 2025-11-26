@@ -42,7 +42,7 @@ const TableItem: FC<{ tokenData: TokenItemDataType }> = ({ tokenData }) => {
                     setPhoto(data.image)
                 }
             })
-            .catch((err) => console.log("Failed to fetch metadata:", err))
+            .catch((err) => console.error("Failed to fetch metadata:", err))
     }, [metadataUri])
 
     const formatCurrency = (num: number | undefined) => {

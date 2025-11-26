@@ -135,7 +135,7 @@ export function TokenDetailsPageClient({ tokenAddress }: { tokenAddress: string 
                 setTokenData(tokenData)
             } catch (err) {
                 console.error("Failed to fetch token data:", err)
-                setError(err instanceof Error ? err.message : "Не удалось загрузить данные токена")
+                setError(err instanceof Error ? err.message : "Cannot fetch token data")
             } finally {
                 if (isInitialLoad) {
                     setIsLoading(false)
@@ -145,23 +145,20 @@ export function TokenDetailsPageClient({ tokenAddress }: { tokenAddress: string 
         [tokenAddress]
     )
 
-    // Первоначальная загрузка данных
     useEffect(() => {
         if (tokenAddress) {
             fetchTokenData(true)
         }
     }, [tokenAddress, fetchTokenData])
 
-    // Автоматическое обновление каждые 10 секунд через ревалидацию Next.js
     useEffect(() => {
         if (!tokenAddress) return
 
         const intervalId = setInterval(() => {
-            // Используем router.refresh() для ревалидации страницы через Next.js
             router.refresh()
-            // Также обновляем данные напрямую
+
             fetchTokenData(false)
-        }, 10000) // 10 секунд
+        }, 10000)
 
         return () => {
             clearInterval(intervalId)
@@ -169,22 +166,20 @@ export function TokenDetailsPageClient({ tokenAddress }: { tokenAddress: string 
     }, [tokenAddress, fetchTokenData, router])
 
     if (isLoading) {
-        return <div className="text-center text-muted-foreground py-8">Загрузка...</div>
+        return <div className="text-center text-muted-foreground py-8">Loading...</div>
     }
 
     if (error) {
         return (
             <div className="text-center text-destructive py-8">
-                <p className="mb-2">Ошибка загрузки данных</p>
+                <p className="mb-2">Error while uploading data</p>
                 <p className="text-sm text-muted-foreground">{error}</p>
             </div>
         )
     }
 
     if (!tokenData) {
-        return (
-            <div className="text-center text-muted-foreground py-8">Данные токена не найдены</div>
-        )
+        return <div className="text-center text-muted-foreground py-8">Token data not found</div>
     }
 
     return <TokenDetails {...tokenData} />

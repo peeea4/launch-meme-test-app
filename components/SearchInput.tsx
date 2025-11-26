@@ -7,12 +7,9 @@ import { Input } from "./ui/input"
 const words = ["Gem", "Sleeper", "Hidden Pick", "Underdog"]
 
 export function SearchInput() {
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        console.log(e.target.value)
-    }
+    const handleChange = () => {}
     const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        console.log("submitted")
     }
 
     return (

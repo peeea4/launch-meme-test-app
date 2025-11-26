@@ -20,7 +20,6 @@ export async function POST(request: NextRequest) {
         })
 
         if (!response.ok) {
-            console.log(response)
             return NextResponse.json(
                 { error: `External API error: ${response.status}` },
                 { status: response.status }

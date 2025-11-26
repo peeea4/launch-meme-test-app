@@ -13,12 +13,8 @@ type WebSocketPushMessage = {
 }
 
 const TokensTable: FC<{ tokens: WebSocketPushMessage[] }> = ({ tokens }) => {
-    const getTokenKey = (data: TokenItemDataType, index: number): string => {
-        return `${data.creator}-${data.token}-${index}`
-    }
-
     return (
-        <div className="w-full max-w-5xl bg-background/60 pt-8">
+        <div className="w-full max-w-7xl bg-background/6">
             <div className="[&>div]:rounded-sm [&>div]:border ">
                 <Table>
                     <TableHeader>
@@ -32,16 +28,11 @@ const TokensTable: FC<{ tokens: WebSocketPushMessage[] }> = ({ tokens }) => {
                         </TableRow>
                     </TableHeader>
                     <TableBody>
-                        {tokens.map((item, index) => {
+                        {tokens.map((item) => {
                             const tokenData = item.push?.pub?.data
                             if (!tokenData) return null
 
-                            return (
-                                <TableItem
-                                    key={getTokenKey(tokenData, index)}
-                                    tokenData={tokenData}
-                                />
-                            )
+                            return <TableItem key={item.token as string} tokenData={tokenData} />
                         })}
                     </TableBody>
                 </Table>

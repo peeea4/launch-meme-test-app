@@ -1,397 +1,194 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import { useEffect, useState } from "react"
-import { Card } from "@/components/ui/card"
+import Image from "next/image"
+import { LineChart, Line, XAxis, CartesianGrid, LabelList } from "recharts"
+import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import { TokenItemDataType } from "@/types/token"
+import { ShootingStars } from "./ui/shooting-stars"
+import { StarsBackground } from "./ui/stars-background"
+import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "./ui/chart"
 
-type MetadataType = {
-    name: string
-    symbol: string
-    description: string | null
-    image: string
-    showName?: boolean
-    createdOn?: string
-    twitter?: string
-    website?: string
-}
+const chartData = [
+    { month: "January", desktop: 186, mobile: 80 },
+    { month: "February", desktop: 305, mobile: 200 },
+    { month: "March", desktop: 237, mobile: 120 },
+    { month: "April", desktop: 73, mobile: 190 },
+    { month: "May", desktop: 209, mobile: 130 },
+    { month: "June", desktop: 214, mobile: 140 },
+]
 
-export default function TokenDetails(tokenData: TokenItemDataType) {
-    const {
-        name,
-        symbol,
-        token,
-        tokenType,
-        supply,
-        decimals,
-        creator,
-        metadataUri,
-        hardcap,
-        marketCapUsd,
-        holders,
-        priceSol,
-        mint_time,
-        pool,
-        txCount,
-        isMigrated,
-        migrationPool,
-        description,
-        website,
-        x,
-        telegram,
-        priceUsd,
-        buys,
-        sells,
-        volumeSol,
-        volumeUsd,
-        version,
-        list_time,
-        last_tx_time,
-        progress,
-        progressSol,
-        _balanceSol,
-        _balanceTokens,
-        configAddress,
-        lastTradeId,
-    } = tokenData
+const chartConfig = {
+    desktop: {
+        label: "Desktop",
+        color: "var(--chart-1)",
+    },
+    mobile: {
+        label: "Mobile",
+        color: "var(--chart-2)",
+    },
+} satisfies ChartConfig
+
+const FALLBACK_IMAGE = "/mnt/data/65bffb7b-9aeb-44fe-bfbf-a2a30602a4cb.png"
+
+type Props = TokenItemDataType
+
+export const TokenDetails = (props: Props) => {
+    const { name, symbol, priceUsd, holders, marketCapUsd, description, metadataUri, token } = props
 
     const [photo, setPhoto] = useState<string | null>(null)
 
     useEffect(() => {
-        // Иначе пытаемся загрузить из metadataUri
         if (!metadataUri) return
-
         fetch(metadataUri)
             .then((res) => res.json())
-            .then((data: MetadataType) => {
-                if (data.image && typeof data.image === "string" && data.image.trim() !== "") {
-                    setPhoto(data.image)
-                }
+            .then((data: any) => {
+                if (data.image && typeof data.image === "string") setPhoto(data.image)
             })
-            .catch((err) => {
-                console.log("Failed to fetch metadata:", err)
-            })
+            .catch(() => {})
     }, [metadataUri])
 
-    const formatNumber = (num: number | undefined) => {
-        if (num === undefined || num === null) return "N/A"
-        return num.toLocaleString(undefined, { maximumFractionDigits: 6 })
-    }
+    const isValidImage = photo && photo.trim().length > 0
 
-    const formatCurrency = (num: number | undefined) => {
-        if (num === undefined || num === null) return "$0.00"
-        return new Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "USD",
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 6,
-        }).format(num)
-    }
+    const formatCurrency = (num?: number | null) =>
+        num !== undefined && num !== null
+            ? new Intl.NumberFormat("en-US", {
+                  style: "currency",
+                  currency: "USD",
+                  maximumFractionDigits: 2,
+              }).format(num)
+            : "—"
 
-    const formatDate = (timestamp: number | undefined) => {
-        if (!timestamp) return "N/A"
-        return new Date(timestamp).toLocaleString()
-    }
-
-    const formattedSupply = (supply / 10 ** decimals).toLocaleString()
-    const progressPercent = progress !== undefined ? (progress * 100).toFixed(2) : "0.00"
-
-    const isValidImageUrl =
-        photo !== null &&
-        photo !== undefined &&
-        typeof photo === "string" &&
-        photo.trim().length > 0
+    const formatNumber = (num?: number | null) =>
+        num !== undefined && num !== null ? num.toLocaleString() : "—"
 
     return (
-        <div className="space-y-6">
-            <Card className="bg-card border-border p-6">
-                <div className="flex gap-6 mb-6">
-                    <div className="w-32 h-32 shrink-0 overflow-hidden rounded-xl bg-muted border border-border">
-                        {isValidImageUrl ? (
-                            <img
-                                src={photo}
-                                alt={name || "Token image"}
-                                className="object-cover w-full h-full"
-                                onError={(e) => {
-                                    e.currentTarget.style.display = "none"
-                                }}
-                            />
-                        ) : (
-                            <div className="w-full h-full flex items-center justify-center text-muted-foreground text-xs">
-                                No Image
+        <div className="min-h-[calc(100vh-96px)] text-slate-100 px-6 py-10 z-10 relative">
+            <div className="max-w-7xl mx-auto grid grid-cols-12 gap-6 rounded-2xl border p-10 bg-card relative z-10">
+                <section className="col-span-8 space-y-6">
+                    <Card className="bg-linear-to-br from-primary/1 to-primary/20 p-6 h-full">
+                        <div className="flex items-start gap-6 h-full">
+                            <div className="w-40 h-40 relative flex-shrink-0 rounded-xl overflow-hidden ring-1 ring-white/10">
+                                <Image
+                                    src={isValidImage ? photo! : FALLBACK_IMAGE}
+                                    alt={name}
+                                    fill
+                                    sizes="96px"
+                                    className="object-cover"
+                                />
                             </div>
-                        )}
-                    </div>
 
-                    <div className="grow">
-                        <div className="flex items-start justify-between mb-2">
-                            <div>
-                                <h1 className="text-3xl font-bold mb-1">{name}</h1>
-                                <p className="text-xl text-muted-foreground font-medium">
-                                    {symbol}
+                            <div className="flex-1">
+                                <div className="flex items-center gap-2">
+                                    <h1 className="text-2xl font-semibold">{name}</h1>
+                                    <span className="text-slate-400 text-base ml-2">{symbol}</span>
+                                </div>
+                                <Badge className="ml-auto">
+                                    {token.slice(0, 5)}...{token.slice(token.length - 5)}
+                                </Badge>
+                                <p className="text-slate-300 mt-2 max-w-[70%]">
+                                    {description ?? "Description not provided."}
                                 </p>
-                                {description && (
-                                    <p className="text-sm text-muted-foreground mt-3">
-                                        {description}
-                                    </p>
-                                )}
-                            </div>
-                            {isMigrated && (
-                                <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-xs font-medium">
-                                    Migrated
-                                </span>
-                            )}
-                        </div>
 
-                        {(website || x || telegram) && (
-                            <div className="flex gap-3 mt-4">
-                                {website && (
-                                    <a
-                                        href={website}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-sm text-primary hover:underline"
-                                    >
-                                        🌐 Website
-                                    </a>
-                                )}
-                                {x && (
-                                    <a
-                                        href={`https://x.com/${x}`}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-sm text-primary hover:underline"
-                                    >
-                                        🐦 Twitter
-                                    </a>
-                                )}
-                                {telegram && (
-                                    <a
-                                        href={telegram}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-sm text-primary hover:underline"
-                                    >
-                                        💬 Telegram
-                                    </a>
-                                )}
+                                <div className="mt-4 flex items-center gap-4">
+                                    <div className="flex flex-col">
+                                        <span className="text-sm text-slate-400">Price</span>
+                                        <div className="text-lg font-medium">
+                                            {formatCurrency(priceUsd ?? undefined)}
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <span className="text-sm text-slate-400">Market cap</span>
+                                        <div className="text-lg font-medium">
+                                            {formatCurrency(marketCapUsd ?? undefined)}
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <span className="text-sm text-slate-400">Holders</span>
+                                        <div className="text-lg font-medium">
+                                            {formatNumber(holders)}
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        )}
-                    </div>
+                        </div>
+                    </Card>
+                </section>
+                <div className="col-span-4 space-y-6 h-full">
+                    <Card className="p-5 bg-primary/5 h-full">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <div className="text-sm text-slate-400">Mindshare</div>
+                                <div className="text-xl font-semibold mt-1">0.03%</div>
+                            </div>
+                            <div className="text-right">
+                                <div className="text-sm text-slate-400">Followers</div>
+                                <div className="text-xl font-semibold mt-1">75,929</div>
+                            </div>
+                        </div>
+                        <div className="mt-6">
+                            <h4 className="text-sm text-slate-300 font-semibold">
+                                Unique Value Proposition
+                            </h4>
+                            <p className="text-sm text-slate-400 mt-3">
+                                A self-custodial neobank that unifies spending, trading, and earning
+                                across all chains — gasless, bridge-less, and custodial-free.
+                            </p>
+                        </div>
+                    </Card>
                 </div>
-
-                {progress !== undefined && (
-                    <div className="mb-6">
-                        <div className="flex justify-between text-sm mb-2">
-                            <span className="text-muted-foreground">Progress</span>
-                            <span className="font-medium">{progressPercent}%</span>
-                        </div>
-                        <div className="w-full bg-muted rounded-full h-2">
-                            <div
-                                className="bg-primary h-2 rounded-full transition-all"
-                                style={{
-                                    width: `${parseInt(progressPercent) >= 100 ? 100 : progressPercent}%`,
+                <Card className="col-span-5 bg-background">
+                    <CardContent>
+                        <ChartContainer config={chartConfig}>
+                            <LineChart
+                                accessibilityLayer
+                                data={chartData}
+                                margin={{
+                                    top: 20,
+                                    left: 12,
+                                    right: 12,
                                 }}
-                            />
-                        </div>
-                        {progressSol !== undefined && (
-                            <div className="text-xs text-muted-foreground mt-1">
-                                {formatNumber(progressSol)} SOL / {formatNumber(hardcap)} SOL
-                            </div>
-                        )}
-                    </div>
-                )}
-
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                    <div className="bg-muted rounded-lg p-3">
-                        <div className="text-xs text-muted-foreground mb-1">Price (SOL)</div>
-                        <div className="text-lg font-bold">{formatNumber(priceSol)}</div>
-                    </div>
-                    <div className="bg-muted rounded-lg p-3">
-                        <div className="text-xs text-muted-foreground mb-1">Price (USD)</div>
-                        <div className="text-lg font-bold">{formatCurrency(priceUsd)}</div>
-                    </div>
-                    <div className="bg-muted rounded-lg p-3">
-                        <div className="text-xs text-muted-foreground mb-1">Market Cap</div>
-                        <div className="text-lg font-bold">{formatCurrency(marketCapUsd)}</div>
-                    </div>
-                    <div className="bg-muted rounded-lg p-3">
-                        <div className="text-xs text-muted-foreground mb-1">Holders</div>
-                        <div className="text-lg font-bold">{formatNumber(holders)}</div>
-                    </div>
-                </div>
-
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div className="bg-secondary rounded-lg p-3">
-                        <div className="text-xs text-muted-foreground mb-1">Volume (SOL)</div>
-                        <div className="text-base font-semibold text-foreground">
-                            {formatNumber(volumeSol)}
-                        </div>
-                    </div>
-                    <div className="bg-secondary rounded-lg p-3">
-                        <div className="text-xs text-muted-foreground mb-1">Volume (USD)</div>
-                        <div className="text-base font-semibold text-foreground">
-                            {formatCurrency(volumeUsd)}
-                        </div>
-                    </div>
-                    <div className="bg-secondary rounded-lg p-3">
-                        <div className="text-xs text-muted-foreground mb-1">Buys</div>
-                        <div className="text-base font-semibold text-foreground">
-                            {formatNumber(buys)}
-                        </div>
-                    </div>
-                    <div className="bg-secondary rounded-lg p-3">
-                        <div className="text-xs text-muted-foreground mb-1">Sells</div>
-                        <div className="text-base font-semibold text-foreground">
-                            {formatNumber(sells)}
-                        </div>
-                    </div>
-                </div>
-            </Card>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card className="bg-card border-border p-6">
-                    <h3 className="font-semibold text-sm text-foreground border-b border-border pb-2 mb-4">
-                        Token Information
-                    </h3>
-                    <div className="space-y-3 text-sm">
-                        <div className="flex justify-between">
-                            <span className="text-muted-foreground">Supply</span>
-                            <span className="font-medium text-foreground">{formattedSupply}</span>
-                        </div>
-                        <div className="flex justify-between">
-                            <span className="text-muted-foreground">Type</span>
-                            <span className="font-medium text-foreground">{tokenType}</span>
-                        </div>
-                        <div className="flex justify-between">
-                            <span className="text-muted-foreground">Decimals</span>
-                            <span className="font-medium text-foreground">{decimals}</span>
-                        </div>
-                        <div className="flex justify-between">
-                            <span className="text-muted-foreground">Hardcap</span>
-                            <span className="font-medium text-foreground">
-                                {formatNumber(hardcap)} SOL
-                            </span>
-                        </div>
-                        <div className="flex justify-between">
-                            <span className="text-muted-foreground">Version</span>
-                            <span className="font-medium text-foreground">{version || "N/A"}</span>
-                        </div>
-                        <div className="flex justify-between">
-                            <span className="text-muted-foreground">Transactions</span>
-                            <span className="font-medium text-foreground">
-                                {formatNumber(txCount)}
-                            </span>
-                        </div>
-                    </div>
+                            >
+                                <CartesianGrid vertical={false} />
+                                <XAxis
+                                    dataKey="month"
+                                    tickLine={false}
+                                    axisLine={false}
+                                    tickMargin={8}
+                                    tickFormatter={(value) => value.slice(0, 3)}
+                                />
+                                <ChartTooltip
+                                    cursor={false}
+                                    content={<ChartTooltipContent indicator="line" />}
+                                />
+                                <Line
+                                    dataKey="desktop"
+                                    type="natural"
+                                    stroke="var(--color-desktop)"
+                                    strokeWidth={2}
+                                    dot={{
+                                        fill: "var(--color-desktop)",
+                                    }}
+                                    activeDot={{
+                                        r: 6,
+                                    }}
+                                >
+                                    <LabelList
+                                        position="top"
+                                        offset={12}
+                                        className="fill-foreground"
+                                        fontSize={12}
+                                    />
+                                </Line>
+                            </LineChart>
+                        </ChartContainer>
+                    </CardContent>
                 </Card>
-
-                <Card className="bg-card border-border p-6">
-                    <h3 className="font-semibold text-sm text-foreground border-b border-border pb-2 mb-4">
-                        Addresses
-                    </h3>
-                    <div className="space-y-3 text-sm">
-                        <div>
-                            <div className="text-muted-foreground mb-1">Token</div>
-                            <div className="font-mono text-xs break-all bg-muted p-2 rounded border border-border">
-                                {token}
-                            </div>
-                        </div>
-                        <div>
-                            <div className="text-muted-foreground mb-1">Creator</div>
-                            <div className="font-mono text-xs break-all bg-muted p-2 rounded border border-border">
-                                {creator}
-                            </div>
-                        </div>
-                        {pool && (
-                            <div>
-                                <div className="text-muted-foreground mb-1">Pool</div>
-                                <div className="font-mono text-xs break-all bg-muted p-2 rounded border border-border">
-                                    {pool}
-                                </div>
-                            </div>
-                        )}
-                        {migrationPool && (
-                            <div>
-                                <div className="text-muted-foreground mb-1">Migration Pool</div>
-                                <div className="font-mono text-xs break-all bg-muted p-2 rounded border border-border">
-                                    {migrationPool}
-                                </div>
-                            </div>
-                        )}
-                        {configAddress && (
-                            <div>
-                                <div className="text-muted-foreground mb-1">Config</div>
-                                <div className="font-mono text-xs break-all bg-muted p-2 rounded border border-border">
-                                    {configAddress}
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </Card>
+                <Card className="col-span-7 bg-linear-to-br from-primary/15 to-primary/0"></Card>
             </div>
-
-            {(mint_time || list_time || last_tx_time) && (
-                <Card className="bg-card border-border p-6">
-                    <h3 className="font-semibold text-sm text-foreground mb-4">Timestamps</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
-                        {!!mint_time && (
-                            <div>
-                                <div className="text-muted-foreground mb-1">Mint Time</div>
-                                <div className="font-medium text-foreground">
-                                    {formatDate(mint_time)}
-                                </div>
-                            </div>
-                        )}
-                        {!!list_time && (
-                            <div>
-                                <div className="text-muted-foreground mb-1">List Time</div>
-                                <div className="font-medium text-foreground">
-                                    {formatDate(list_time)}
-                                </div>
-                            </div>
-                        )}
-                        {!!last_tx_time && (
-                            <div>
-                                <div className="text-muted-foreground mb-1">Last Transaction</div>
-                                <div className="font-medium text-foreground">
-                                    {formatDate(last_tx_time)}
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </Card>
-            )}
-
-            {(_balanceSol !== undefined || _balanceTokens !== undefined || lastTradeId) && (
-                <Card className="bg-card border-border p-6">
-                    <h3 className="font-semibold text-sm text-foreground mb-4">Additional Info</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
-                        {_balanceSol !== undefined && (
-                            <div>
-                                <div className="text-muted-foreground mb-1">Balance (SOL)</div>
-                                <div className="font-medium text-foreground">
-                                    {formatNumber(_balanceSol)}
-                                </div>
-                            </div>
-                        )}
-                        {_balanceTokens !== undefined && (
-                            <div>
-                                <div className="text-muted-foreground mb-1">Balance (Tokens)</div>
-                                <div className="font-medium text-foreground">
-                                    {formatNumber(_balanceTokens)}
-                                </div>
-                            </div>
-                        )}
-                        {lastTradeId && (
-                            <div>
-                                <div className="text-muted-foreground mb-1">Last Trade ID</div>
-                                <div className="font-mono text-xs break-all text-foreground">
-                                    {lastTradeId}
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </Card>
-            )}
+            <ShootingStars />
+            <StarsBackground />
         </div>
     )
 }

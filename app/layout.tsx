@@ -4,7 +4,6 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/ThemeProvider"
 
 import Navbar from "@/components/NavBar/NavBar"
-import { HeroBackground } from "@/components/hero-background"
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -20,7 +19,6 @@ const navigationData = [
     {
         title: "Home",
         href: "/",
-        // icon: Home,
     },
 ]
 
@@ -43,12 +41,11 @@ export default function RootLayout({
                     enableSystem
                     disableTransitionOnChange
                 >
-                    <HeroBackground>
-                        <main>
-                            <Navbar navigationData={navigationData} />
-                            {children}
-                        </main>
-                    </HeroBackground>
+                    <Navbar navigationData={navigationData} />
+                    {children}
+                    <footer className="h-[100px] w-full flex justify-center">
+                        <div className="max-w-7xl w-full">Footer</div>
+                    </footer>
                 </ThemeProvider>
             </body>
         </html>

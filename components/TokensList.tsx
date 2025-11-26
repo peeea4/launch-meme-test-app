@@ -1,11 +1,11 @@
 "use client"
 import { useWebSocket } from "@/hooks/use-websocket"
 import { TokenItemDataType } from "@/types/token"
-import { useEffect, useCallback, useRef, useState, startTransition } from "react"
+import { startTransition, useCallback, useEffect, useRef, useState } from "react"
 
+import { SearchInput } from "./search-input"
 import TokensTable from "./Table/TokensTable"
 import { LoaderFour } from "./ui/loader"
-import { PlaceholdersAndVanishInputDemo } from "./search-input"
 
 const WS_URL = "wss://launch.meme/connection/websocket"
 
@@ -73,14 +73,16 @@ export const TokensList = () => {
         }
     }, [lastMessage, sendJson])
 
-    const tokenMessages = messages.filter((message): message is WebSocketPushMessage =>
-        Boolean(message?.push?.channel === "pumpfun-mintTokens")
-    )
+    const tokenMessages = messages
+        .filter((message): message is WebSocketPushMessage =>
+            Boolean(message?.push?.channel === "pumpfun-mintTokens")
+        )
+        .reverse()
 
     if (tokenMessages.length === 0)
         return (
-            <div className="flex flex-col gap-4 items-center w-full px-4">
-                <div className="text-center text-3xl text-gray-500 py-8 w-full">
+            <div className="flex flex-col gap-4 justify-center items-center h-[calc(100vh-96px)] px-4">
+                <div className="text-center text-4xl text-gray-500 py-8 w-full">
                     <LoaderFour
                         text={isSubscribed ? "Waiting for new tokens..." : "Connecting..."}
                     />
@@ -89,8 +91,8 @@ export const TokensList = () => {
         )
 
     return (
-        <div className="flex flex-col gap-4 items-center w-full px-4">
-            <PlaceholdersAndVanishInputDemo />
+        <div className="flex flex-col gap-4 items-center w-full px-4 pb-20">
+            <SearchInput />
             <TokensTable tokens={tokenMessages} />
         </div>
     )

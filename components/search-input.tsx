@@ -1,12 +1,12 @@
 "use client"
 
-import { LayoutTextFlip } from "./ui/layout-text-flip"
-import { PlaceholdersAndVanishInput } from "./ui/placeholders-and-vanish-input"
 import { motion } from "motion/react"
+import { LayoutTextFlip } from "./ui/layout-text-flip"
+import { Input } from "./ui/input"
 
 const words = ["Gem", "Sleeper", "Hidden Pick", "Underdog"]
 
-export function PlaceholdersAndVanishInputDemo() {
+export function SearchInput() {
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         console.log(e.target.value)
     }
@@ -23,7 +23,7 @@ export function PlaceholdersAndVanishInputDemo() {
                 </motion.div>
             </div>
 
-            <PlaceholdersAndVanishInput onChange={handleChange} onSubmit={onSubmit} />
+            <Input onChange={handleChange} onSubmit={onSubmit} />
         </div>
     )
 }

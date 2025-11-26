@@ -13,7 +13,7 @@ export function HeroBackground({
 }) {
     return (
         <HeroHighlight className="min-h-screen">
-            <motion.h1
+            <motion.main
                 initial={{
                     opacity: 0,
                     y: 20,
@@ -26,10 +26,10 @@ export function HeroBackground({
                     duration: 0.5,
                     ease: [0.4, 0.0, 0.2, 1],
                 }}
-                className={cn(className)}
+                className={cn(className, "min-h-screen")}
             >
                 {children}
-            </motion.h1>
+            </motion.main>
         </HeroHighlight>
     )
 }

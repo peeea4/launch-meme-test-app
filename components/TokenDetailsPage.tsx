@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState, useCallback } from "react"
 import { useRouter } from "next/navigation"
-import TokenDetails from "./TokenDetails"
+import { TokenDetails } from "./TokenDetails"
 import { TokenItemDataType } from "@/types/token"
 
 const API_URL = "/api/tokens"
@@ -76,7 +76,6 @@ export function TokenDetailsPageClient({ tokenAddress }: { tokenAddress: string 
                         "Content-Type": "application/json",
                     },
                     body: JSON.stringify({ id: tokenAddress }),
-                    // Используем кэширование Next.js с ревалидацией
                     next: { revalidate: 10 },
                 })
 
@@ -93,7 +92,6 @@ export function TokenDetailsPageClient({ tokenAddress }: { tokenAddress: string 
                     throw new Error("Token not found in response")
                 }
 
-                // Преобразуем данные из API в формат TokenItemDataType
                 const tokenData: TokenItemDataType = {
                     token: apiToken.token,
                     tokenType: apiToken.tokenType,

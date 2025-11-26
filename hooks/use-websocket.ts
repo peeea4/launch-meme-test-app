@@ -6,6 +6,7 @@ type WebSocketMessage = {
     push?: {
         channel?: string
         pub?: {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             data?: any
         }
     }
@@ -53,6 +54,7 @@ export function useWebSocket(
     }, [])
 
     const disconnect = useCallback(() => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         reconnectTimeout.current && clearTimeout(reconnectTimeout.current)
         wsRef.current?.close()
     }, [])
@@ -79,39 +81,24 @@ export function useWebSocket(
 
                     const channel = parsed.push.channel
                     const data = parsed.push.pub?.data
-                    const token = data?.token
+                    const token = data?.token || ""
 
                     if (!token) return
 
-                    // -----------------------
-                    // 🟢 NEW TOKEN
-                    // -----------------------
                     if (channel === "pumpfun-mintTokens") {
                         setMessages((prev) => {
-                            const next = [parsed, ...prev]
-                            // записываем index в Map
-                            indexMap.current.set(token, 0)
-
-                            // сдвигаем индексы всех старых токенов
-                            for (const [t, i] of indexMap.current.entries()) {
-                                if (t !== token) {
-                                    indexMap.current.set(t, i + 1)
-                                }
-                            }
-
+                            const next = [...prev, parsed]
+                            indexMap.current.set(token, next.length - 1)
                             return next
                         })
                     }
 
-                    // -----------------------
-                    // 🟡 UPDATE TOKEN
-                    // -----------------------
                     if (channel === "pumpfun-tokenUpdates") {
                         const idx = indexMap.current.get(token)
                         if (idx === undefined) return
 
                         setMessages((prev) => {
-                            const next = [...prev] // копия
+                            const next = [...prev]
                             next[idx] = {
                                 ...next[idx],
                                 push: {
@@ -120,7 +107,7 @@ export function useWebSocket(
                                         ...next[idx]?.push?.pub,
                                         data: {
                                             ...next[idx]?.push?.pub?.data,
-                                            ...data, // только обновление
+                                            ...data,
                                         },
                                     },
                                 },
@@ -138,6 +125,7 @@ export function useWebSocket(
         ws.onclose = () => {
             setReadyState(ws.readyState)
             if (reconnect) {
+                // eslint-disable-next-line react-hooks/immutability
                 reconnectTimeout.current = setTimeout(connect, reconnectInterval)
             }
         }

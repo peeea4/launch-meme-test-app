@@ -1,13 +1,15 @@
 import { TokenDetailsPageClient } from "@/components/TokenDetailsPage"
+import { ShootingStars } from "@/components/ui/shooting-stars"
+import { StarsBackground } from "@/components/ui/stars-background"
 
 export default async function TokenDetailsPage({ params }: { params: Promise<{ token: string }> }) {
     const { token } = await params
 
     return (
-        <div className="flex min-h-screen flex-col bg-background font-sans p-8">
-            <div className="max-w-6xl mx-auto w-full">
-                <TokenDetailsPageClient tokenAddress={token} />
-            </div>
+        <div className="max-w-7xl mx-auto w-full">
+            <TokenDetailsPageClient tokenAddress={token} />
+            <ShootingStars />
+            <StarsBackground />
         </div>
     )
 }

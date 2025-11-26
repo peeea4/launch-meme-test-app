@@ -2,7 +2,7 @@
 
 import React from "react"
 
-export function PlaceholdersAndVanishInput({
+export function Input({
     placeholder = "Search tokens...",
     onChange,
     onSubmit,

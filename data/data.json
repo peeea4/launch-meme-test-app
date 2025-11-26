@@ -1,0 +1,1667 @@
+{
+    "data": {
+        "points": [
+            {
+                "marketCap": 901399351176.46,
+                "volume": 79134402796.83,
+                "btcValue": 392646879629.14,
+                "ethValue": 137002970321.63,
+                "stableValue": 152579705252.97,
+                "otherValue": 219169795972.72,
+                "timestamp": "1655683200"
+            },
+            {
+                "marketCap": 941715698414.9,
+                "volume": 51243900209.17,
+                "btcValue": 401104221882.97,
+                "ethValue": 145548449111.29,
+                "stableValue": 151695600734.54,
+                "otherValue": 243367426686.1,
+                "timestamp": "1656288000"
+            },
+            {
+                "marketCap": 873658987260.77,
+                "volume": 39463136646.21,
+                "btcValue": 368277180410.48,
+                "ethValue": 130358232424.56,
+                "stableValue": 151669728426.68,
+                "otherValue": 223353845999.05,
+                "timestamp": "1656892800"
+            },
+            {
+                "marketCap": 927919604901.18,
+                "volume": 55230620788.84,
+                "btcValue": 398159374285.36,
+                "ethValue": 141922226962.45,
+                "stableValue": 151040296512.37,
+                "otherValue": 236797707141,
+                "timestamp": "1657497600"
+            },
+            {
+                "marketCap": 953526446987.57,
+                "volume": 58301396592.48,
+                "btcValue": 396857346488.92,
+                "ethValue": 162783844724.77,
+                "stableValue": 150386457506.86,
+                "otherValue": 243498798267.02,
+                "timestamp": "1658102400"
+            },
+            {
+                "marketCap": 1040257197191.05,
+                "volume": 58279935786.75,
+                "btcValue": 431850498580.7,
+                "ethValue": 194591329573.57,
+                "stableValue": 150786584188.96,
+                "otherValue": 263028784847.82,
+                "timestamp": "1658707200"
+            },
+            {
+                "marketCap": 1082465015425.74,
+                "volume": 71721670030.5,
+                "btcValue": 445937681388.27,
+                "ethValue": 204762984518.39,
+                "stableValue": 150730259994.09,
+                "otherValue": 281034089524.99,
+                "timestamp": "1659312000"
+            },
+            {
+                "marketCap": 1097375715084.31,
+                "volume": 41713178118.06,
+                "btcValue": 443084471061.09,
+                "ethValue": 207145372307.71,
+                "stableValue": 151003403121.21,
+                "otherValue": 296142468594.3,
+                "timestamp": "1659916800"
+            },
+            {
+                "marketCap": 1162168587472.8,
+                "volume": 61043490817.9,
+                "btcValue": 465004931112.26,
+                "ethValue": 236217803059.46,
+                "stableValue": 150767683627.7,
+                "otherValue": 310178169673.38,
+                "timestamp": "1660521600"
+            },
+            {
+                "marketCap": 1028890777487.94,
+                "volume": 58461687188.73,
+                "btcValue": 411855842926.11,
+                "ethValue": 197632405765.97,
+                "stableValue": 150621895879.62,
+                "otherValue": 268780632916.24,
+                "timestamp": "1661126400"
+            },
+            {
+                "marketCap": 945298873089.24,
+                "volume": 50647265612.86,
+                "btcValue": 375335586910.41,
+                "ethValue": 174728142155.29,
+                "stableValue": 150491818731.57,
+                "otherValue": 244743325291.97,
+                "timestamp": "1661731200"
+            },
+            {
+                "marketCap": 985415723231.75,
+                "volume": 46411964057.5,
+                "btcValue": 382616279827.5,
+                "ethValue": 192883012058.76,
+                "stableValue": 150502935349.19,
+                "otherValue": 259413495996.3,
+                "timestamp": "1662336000"
+            },
+            {
+                "marketCap": 1061255536784.28,
+                "volume": 66970051831.45,
+                "btcValue": 416857365329.29,
+                "ethValue": 215558766507.59,
+                "stableValue": 151112393684.49,
+                "otherValue": 277727011262.91,
+                "timestamp": "1662940800"
+            },
+            {
+                "marketCap": 929481300890.9,
+                "volume": 64407867894.83,
+                "btcValue": 371952540829.02,
+                "ethValue": 163471463643.65,
+                "stableValue": 150107941336.89,
+                "otherValue": 243949355081.34,
+                "timestamp": "1663545600"
+            },
+            {
+                "marketCap": 923565129007.53,
+                "volume": 50504119604.46,
+                "btcValue": 360293886839.4,
+                "ethValue": 158595493861.65,
+                "stableValue": 149601769096.44,
+                "otherValue": 255073979210.04,
+                "timestamp": "1664150400"
+            },
+            {
+                "marketCap": 921169893135.97,
+                "volume": 41423817571.08,
+                "btcValue": 365024066328.2,
+                "ethValue": 156490558646.28,
+                "stableValue": 147666843759.22,
+                "otherValue": 251988424402.27,
+                "timestamp": "1664755200"
+            },
+            {
+                "marketCap": 943771480926.06,
+                "volume": 32086577632.02,
+                "btcValue": 372876630265.13,
+                "ethValue": 162319624211.83,
+                "stableValue": 147412415617.02,
+                "otherValue": 261162810832.08,
+                "timestamp": "1665360000"
+            },
+            {
+                "marketCap": 926743260655.18,
+                "volume": 40502472096.21,
+                "btcValue": 369593295580.05,
+                "ethValue": 159858153250.39,
+                "stableValue": 146387158579.62,
+                "otherValue": 250904653245.12,
+                "timestamp": "1665964800"
+            },
+            {
+                "marketCap": 941978088189.21,
+                "volume": 43092165455.55,
+                "btcValue": 375458887820.45,
+                "ethValue": 166855760230.67,
+                "stableValue": 144875901577.39,
+                "otherValue": 254787538560.7,
+                "timestamp": "1666569600"
+            },
+            {
+                "marketCap": 1015953394662.61,
+                "volume": 70268970463.34,
+                "btcValue": 396038519806.99,
+                "ethValue": 194633337900.28,
+                "stableValue": 144998647431.98,
+                "otherValue": 280282889523.36,
+                "timestamp": "1667174400"
+            },
+            {
+                "marketCap": 1029852768064.03,
+                "volume": 66264515821.84,
+                "btcValue": 401756500650.05,
+                "ethValue": 192373791454.68,
+                "stableValue": 145221095899.5,
+                "otherValue": 290501380059.8,
+                "timestamp": "1667779200"
+            },
+            {
+                "marketCap": 824954511603.51,
+                "volume": 54542454407.48,
+                "btcValue": 314067574943.42,
+                "ethValue": 149528074438.9,
+                "stableValue": 144540619404.72,
+                "otherValue": 216818242816.47,
+                "timestamp": "1668384000"
+            },
+            {
+                "marketCap": 806933231060.66,
+                "volume": 48538490383.02,
+                "btcValue": 313001132419.77,
+                "ethValue": 139799388626.3,
+                "stableValue": 143664397663.3,
+                "otherValue": 210468312351.29,
+                "timestamp": "1668988800"
+            },
+            {
+                "marketCap": 834144584739.19,
+                "volume": 37446145928.27,
+                "btcValue": 315955882109.18,
+                "ethValue": 146231918398.58,
+                "stableValue": 142208189454.74,
+                "otherValue": 229748594776.69,
+                "timestamp": "1669593600"
+            },
+            {
+                "marketCap": 859993293104.71,
+                "volume": 30985039172.39,
+                "btcValue": 329293242355.91,
+                "ethValue": 156638407230.1,
+                "stableValue": 141267554814.63,
+                "otherValue": 232794088704.07,
+                "timestamp": "1670198400"
+            },
+            {
+                "marketCap": 850335384728.14,
+                "volume": 25118322642.01,
+                "btcValue": 328900755364.69,
+                "ethValue": 154628365974.93,
+                "stableValue": 140896273268.67,
+                "otherValue": 225909990119.85,
+                "timestamp": "1670803200"
+            },
+            {
+                "marketCap": 810215735889.84,
+                "volume": 20573019600.16,
+                "btcValue": 322400373925.68,
+                "ethValue": 144983456228.02,
+                "stableValue": 139659930409.79,
+                "otherValue": 203171975326.35,
+                "timestamp": "1671408000"
+            },
+            {
+                "marketCap": 810083859115.48,
+                "volume": 21109472741.41,
+                "btcValue": 324098232981.29,
+                "ethValue": 149163975107.65,
+                "stableValue": 138034223033.07,
+                "otherValue": 198787427993.47,
+                "timestamp": "1672012800"
+            },
+            {
+                "marketCap": 798558682944.8,
+                "volume": 16724262386.4,
+                "btcValue": 320034108997.91,
+                "ethValue": 146983655755.2,
+                "stableValue": 137258762916.87,
+                "otherValue": 194282155274.82,
+                "timestamp": "1672617600"
+            },
+            {
+                "marketCap": 837399569381.43,
+                "volume": 22406111785.29,
+                "btcValue": 329169389618.57,
+                "ethValue": 157550331013.32,
+                "stableValue": 136516683540.88,
+                "otherValue": 214163165208.66,
+                "timestamp": "1673222400"
+            },
+            {
+                "marketCap": 982748084895.92,
+                "volume": 46465363034.47,
+                "btcValue": 402262109369.25,
+                "ethValue": 189987783615.54,
+                "stableValue": 136656172784.23,
+                "otherValue": 253842019126.9,
+                "timestamp": "1673827200"
+            },
+            {
+                "marketCap": 1039953113862.48,
+                "volume": 51552421107.57,
+                "btcValue": 437827426327.45,
+                "ethValue": 199292058943.08,
+                "stableValue": 136424754668.45,
+                "otherValue": 266408873923.5,
+                "timestamp": "1674432000"
+            },
+            {
+                "marketCap": 1081269921766.65,
+                "volume": 52215648093.49,
+                "btcValue": 458292757819.6,
+                "ethValue": 201445451929.04,
+                "stableValue": 136496941499.21,
+                "otherValue": 285034770518.8,
+                "timestamp": "1675036800"
+            },
+            {
+                "marketCap": 1065820780089.09,
+                "volume": 48566666147.31,
+                "btcValue": 442610630121.88,
+                "ethValue": 199670742126.2,
+                "stableValue": 136508461718.08,
+                "otherValue": 287030946122.93,
+                "timestamp": "1675641600"
+            },
+            {
+                "marketCap": 1013799601952.38,
+                "volume": 37854397620.34,
+                "btcValue": 420251062814.24,
+                "ethValue": 185386256782.48,
+                "stableValue": 135140302282.4,
+                "otherValue": 273021980073.26,
+                "timestamp": "1676246400"
+            },
+            {
+                "marketCap": 1109583735636.79,
+                "volume": 56307800976.88,
+                "btcValue": 469604789361.83,
+                "ethValue": 205874086910.7,
+                "stableValue": 134819614425.87,
+                "otherValue": 299285244938.39,
+                "timestamp": "1676851200"
+            },
+            {
+                "marketCap": 1078240731969.19,
+                "volume": 34341666010.34,
+                "btcValue": 454799755438.97,
+                "ethValue": 200786593396.58,
+                "stableValue": 133943680706.46,
+                "otherValue": 288710702427.18,
+                "timestamp": "1677456000"
+            },
+            {
+                "marketCap": 1024951173177.32,
+                "volume": 28750383104.81,
+                "btcValue": 433241312794.8,
+                "ethValue": 188435996049.83,
+                "stableValue": 133577739215.35,
+                "otherValue": 269696125117.34,
+                "timestamp": "1678060800"
+            },
+            {
+                "marketCap": 1013838148032.96,
+                "volume": 64580463010.92,
+                "btcValue": 427968852997.63,
+                "ethValue": 191627986815.74,
+                "stableValue": 132845353149.79,
+                "otherValue": 261395955069.8,
+                "timestamp": "1678665600"
+            },
+            {
+                "marketCap": 1175626910203.8,
+                "volume": 65056772847.18,
+                "btcValue": 541827880189.57,
+                "ethValue": 215067276302.96,
+                "stableValue": 131603659425.45,
+                "otherValue": 287128094285.82,
+                "timestamp": "1679270400"
+            },
+            {
+                "marketCap": 1166614358045.19,
+                "volume": 31515223763.7,
+                "btcValue": 541101006111.45,
+                "ethValue": 213870532510.64,
+                "stableValue": 131520621331.1,
+                "otherValue": 280122198092,
+                "timestamp": "1679875200"
+            },
+            {
+                "marketCap": 1173729564560.52,
+                "volume": 31925080914.24,
+                "btcValue": 544932174732.76,
+                "ethValue": 216212363710.77,
+                "stableValue": 130220601193.81,
+                "otherValue": 282364424923.18,
+                "timestamp": "1680480000"
+            },
+            {
+                "marketCap": 1186469173909.93,
+                "volume": 29603164737.32,
+                "btcValue": 548072794581.16,
+                "ethValue": 224020284926.83,
+                "stableValue": 130331447511.86,
+                "otherValue": 284044646890.08,
+                "timestamp": "1681084800"
+            },
+            {
+                "marketCap": 1281350156306.89,
+                "volume": 36693765812.84,
+                "btcValue": 586581440454.09,
+                "ethValue": 255307035338.74,
+                "stableValue": 129440241594.63,
+                "otherValue": 310021438919.43,
+                "timestamp": "1681689600"
+            },
+            {
+                "marketCap": 1164226275750.82,
+                "volume": 30093079797.04,
+                "btcValue": 534026888204.38,
+                "ethValue": 224217676728.95,
+                "stableValue": 128420159381.42,
+                "otherValue": 277561551436.07,
+                "timestamp": "1682294400"
+            },
+            {
+                "marketCap": 1201145917496.18,
+                "volume": 31897279995.43,
+                "btcValue": 565853889399.81,
+                "ethValue": 225007993023.4,
+                "stableValue": 128051684394.7,
+                "otherValue": 282232350678.27,
+                "timestamp": "1682899200"
+            },
+            {
+                "marketCap": 1172950585268.7,
+                "volume": 27741671879.54,
+                "btcValue": 550995742407.1,
+                "ethValue": 225342224170.78,
+                "stableValue": 128018723766.88,
+                "otherValue": 268593894923.94,
+                "timestamp": "1683504000"
+            },
+            {
+                "marketCap": 1126129060708,
+                "volume": 22048926216.23,
+                "btcValue": 521756688323.76,
+                "ethValue": 216561245722.21,
+                "stableValue": 127997457117.31,
+                "otherValue": 259813669544.72,
+                "timestamp": "1684108800"
+            },
+            {
+                "marketCap": 1118255293392.19,
+                "volume": 19705728479.39,
+                "btcValue": 518413251319.43,
+                "ethValue": 217070290609.43,
+                "stableValue": 127517022082.22,
+                "otherValue": 255254729381.11,
+                "timestamp": "1684713600"
+            },
+            {
+                "marketCap": 1165912227241.03,
+                "volume": 30629539696.06,
+                "btcValue": 544288674295.19,
+                "ethValue": 229604503969.01,
+                "stableValue": 126975593759.34,
+                "otherValue": 265043455217.49,
+                "timestamp": "1685318400"
+            },
+            {
+                "marketCap": 1145085643469.01,
+                "volume": 21804578581.58,
+                "btcValue": 525998634266.81,
+                "ethValue": 227296497382.56,
+                "stableValue": 126669350750.1,
+                "otherValue": 265121161069.54,
+                "timestamp": "1685923200"
+            },
+            {
+                "marketCap": 1055658271915.24,
+                "volume": 24709772288.43,
+                "btcValue": 503116867551.67,
+                "ethValue": 210767494020.12,
+                "stableValue": 125869202945.3,
+                "otherValue": 215904707398.15,
+                "timestamp": "1686528000"
+            },
+            {
+                "marketCap": 1062998307234.91,
+                "volume": 20558873686.97,
+                "btcValue": 511064751890.69,
+                "ethValue": 206823438685.97,
+                "stableValue": 126087371141.15,
+                "otherValue": 219022745517.1,
+                "timestamp": "1687132800"
+            },
+            {
+                "marketCap": 1187181553019.6,
+                "volume": 31999934124.49,
+                "btcValue": 591688693378.31,
+                "ethValue": 228370142307.44,
+                "stableValue": 126411284089.94,
+                "otherValue": 240711433243.91,
+                "timestamp": "1687737600"
+            },
+            {
+                "marketCap": 1203000452278.47,
+                "volume": 30128549940.35,
+                "btcValue": 594674697608.45,
+                "ethValue": 232969980962.85,
+                "stableValue": 125133374521.54,
+                "otherValue": 250222399185.63,
+                "timestamp": "1688342400"
+            },
+            {
+                "marketCap": 1174873887113.13,
+                "volume": 19725790995.39,
+                "btcValue": 586102876254.01,
+                "ethValue": 223977662360.66,
+                "stableValue": 124824118296.79,
+                "otherValue": 239969230201.67,
+                "timestamp": "1688947200"
+            },
+            {
+                "marketCap": 1210039419682.48,
+                "volume": 25724476071.66,
+                "btcValue": 587787663959.21,
+                "ethValue": 231228423349.69,
+                "stableValue": 124603842095.53,
+                "otherValue": 266419490278.05,
+                "timestamp": "1689552000"
+            },
+            {
+                "marketCap": 1203080973493.21,
+                "volume": 23613007970.16,
+                "btcValue": 584707033925.71,
+                "ethValue": 227023586751.33,
+                "stableValue": 123867583182.4,
+                "otherValue": 267482769633.77,
+                "timestamp": "1690156800"
+            },
+            {
+                "marketCap": 1181621186644.45,
+                "volume": 24169910071.28,
+                "btcValue": 569275446529.51,
+                "ethValue": 223747758766.24,
+                "stableValue": 123617550706.75,
+                "otherValue": 264980430641.95,
+                "timestamp": "1690761600"
+            },
+            {
+                "marketCap": 1160281982994.49,
+                "volume": 20655635028.29,
+                "btcValue": 564799597546.83,
+                "ethValue": 219566729941.64,
+                "stableValue": 122550727794.21,
+                "otherValue": 253364927711.81,
+                "timestamp": "1691366400"
+            },
+            {
+                "marketCap": 1169116064432.26,
+                "volume": 19376785083.97,
+                "btcValue": 569744856574.59,
+                "ethValue": 220986935949.64,
+                "stableValue": 123073474468.91,
+                "otherValue": 255310797439.12,
+                "timestamp": "1691971200"
+            },
+            {
+                "marketCap": 1061887440957.66,
+                "volume": 21753799324.09,
+                "btcValue": 509716535724.42,
+                "ethValue": 202559222978.65,
+                "stableValue": 122018351060.52,
+                "otherValue": 227593331194.07,
+                "timestamp": "1692576000"
+            },
+            {
+                "marketCap": 1053098943196.97,
+                "volume": 16329890710.52,
+                "btcValue": 507948000836.58,
+                "ethValue": 199252368656.42,
+                "stableValue": 122035249443.78,
+                "otherValue": 223863324260.19,
+                "timestamp": "1693180800"
+            },
+            {
+                "marketCap": 1044553481554.5,
+                "volume": 19855263792.02,
+                "btcValue": 505746810882.64,
+                "ethValue": 196641494775.71,
+                "stableValue": 122482387078.34,
+                "otherValue": 219682788817.81,
+                "timestamp": "1693785600"
+            },
+            {
+                "marketCap": 1035507857537.16,
+                "volume": 20279672156.4,
+                "btcValue": 503248470032.46,
+                "ethValue": 194368981373.86,
+                "stableValue": 122031055794.4,
+                "otherValue": 215859350336.44,
+                "timestamp": "1694390400"
+            },
+            {
+                "marketCap": 1054114116355.4,
+                "volume": 17607070976.34,
+                "btcValue": 517093575637.91,
+                "ethValue": 195134061773.75,
+                "stableValue": 121932558362.38,
+                "otherValue": 219953920581.36,
+                "timestamp": "1694995200"
+            },
+            {
+                "marketCap": 1043687188538.18,
+                "volume": 17995019275.53,
+                "btcValue": 511817506985.19,
+                "ethValue": 190053274324.73,
+                "stableValue": 121981446627.5,
+                "otherValue": 219834960600.76,
+                "timestamp": "1695600000"
+            },
+            {
+                "marketCap": 1110774639228.37,
+                "volume": 33129903900.2,
+                "btcValue": 545583757465.87,
+                "ethValue": 208371635183.17,
+                "stableValue": 121192596205.92,
+                "otherValue": 235626650373.41,
+                "timestamp": "1696204800"
+            },
+            {
+                "marketCap": 1091179431499.26,
+                "volume": 17993484538.15,
+                "btcValue": 544945487401.61,
+                "ethValue": 196418896308.13,
+                "stableValue": 121693294889.93,
+                "otherValue": 228121752899.59,
+                "timestamp": "1696809600"
+            },
+            {
+                "marketCap": 1059425864624.88,
+                "volume": 18364309175.51,
+                "btcValue": 530075104419.7,
+                "ethValue": 187399877022.35,
+                "stableValue": 121213569732.21,
+                "otherValue": 220737313450.62,
+                "timestamp": "1697414400"
+            },
+            {
+                "marketCap": 1145025658169.76,
+                "volume": 40315072632.84,
+                "btcValue": 585684252376.76,
+                "ethValue": 200163538909.25,
+                "stableValue": 122149955492.38,
+                "otherValue": 237027911391.37,
+                "timestamp": "1698019200"
+            },
+            {
+                "marketCap": 1271072550582.4,
+                "volume": 25807550720.52,
+                "btcValue": 674324173822.68,
+                "ethValue": 215953185531.89,
+                "stableValue": 122424043219.71,
+                "otherValue": 258371148008.12,
+                "timestamp": "1698624000"
+            },
+            {
+                "marketCap": 1320182625569.52,
+                "volume": 38262295253.18,
+                "btcValue": 684578488613.96,
+                "ethValue": 227792579228.88,
+                "stableValue": 122850869636.19,
+                "otherValue": 284960688090.49,
+                "timestamp": "1699228800"
+            },
+            {
+                "marketCap": 1415333472844.52,
+                "volume": 46268513172.43,
+                "btcValue": 724382728634.16,
+                "ethValue": 245976279914.19,
+                "stableValue": 123857658557.58,
+                "otherValue": 321116805738.59,
+                "timestamp": "1699833600"
+            },
+            {
+                "marketCap": 1420313224272.62,
+                "volume": 38807583588.79,
+                "btcValue": 730558961165.7,
+                "ethValue": 241930762755.15,
+                "stableValue": 124879181301.92,
+                "otherValue": 322944319049.85,
+                "timestamp": "1700438400"
+            },
+            {
+                "marketCap": 1426561110016.36,
+                "volume": 40656263052.68,
+                "btcValue": 732376685153.87,
+                "ethValue": 247992560501.71,
+                "stableValue": 126220767062.5,
+                "otherValue": 319971097298.28,
+                "timestamp": "1701043200"
+            },
+            {
+                "marketCap": 1498312891719.88,
+                "volume": 44075804300.86,
+                "btcValue": 781990691691.92,
+                "ethValue": 263753466889.51,
+                "stableValue": 127043465186.61,
+                "otherValue": 325525267951.84,
+                "timestamp": "1701648000"
+            },
+            {
+                "marketCap": 1639844113351.76,
+                "volume": 44627330832.33,
+                "btcValue": 856849116574.68,
+                "ethValue": 282809017359.33,
+                "stableValue": 127553499276.73,
+                "otherValue": 372632480141.02,
+                "timestamp": "1702252800"
+            },
+            {
+                "marketCap": 1568028389888.06,
+                "volume": 47526180366.85,
+                "btcValue": 809306292080.96,
+                "ethValue": 263879421629.26,
+                "stableValue": 127968319645.56,
+                "otherValue": 366874356532.28,
+                "timestamp": "1702857600"
+            },
+            {
+                "marketCap": 1656582894748.92,
+                "volume": 64524457197.07,
+                "btcValue": 842145383382.27,
+                "ethValue": 272257190656.39,
+                "stableValue": 128833051671.97,
+                "otherValue": 413347269038.29,
+                "timestamp": "1703462400"
+            },
+            {
+                "marketCap": 1647895239480.1,
+                "volume": 45890790502.08,
+                "btcValue": 828105973148.91,
+                "ethValue": 274233377052.02,
+                "stableValue": 128451821465.14,
+                "otherValue": 417104067814.03,
+                "timestamp": "1704067200"
+            },
+            {
+                "marketCap": 1635454867091.54,
+                "volume": 47874661366.64,
+                "btcValue": 861061744868.87,
+                "ethValue": 267154224206.04,
+                "stableValue": 131143169323.54,
+                "otherValue": 376095728693.09,
+                "timestamp": "1704672000"
+            },
+            {
+                "marketCap": 1645890473684.53,
+                "volume": 48568967323.33,
+                "btcValue": 817568374488.33,
+                "ethValue": 297049202414.75,
+                "stableValue": 132254097289.85,
+                "otherValue": 399018799491.6,
+                "timestamp": "1705276800"
+            },
+            {
+                "marketCap": 1634220237273.51,
+                "volume": 30221722660.74,
+                "btcValue": 814643238194.69,
+                "ethValue": 295032863314.18,
+                "stableValue": 132474747027.13,
+                "otherValue": 392069388737.51,
+                "timestamp": "1705881600"
+            },
+            {
+                "marketCap": 1618249953970.65,
+                "volume": 42362491759.43,
+                "btcValue": 824296105975.77,
+                "ethValue": 271248506562.99,
+                "stableValue": 133679708707.49,
+                "otherValue": 389025632724.4,
+                "timestamp": "1706486400"
+            },
+            {
+                "marketCap": 1632931794935.99,
+                "volume": 33241624743.13,
+                "btcValue": 835304838693.36,
+                "ethValue": 275122592462.48,
+                "stableValue": 134658317261.62,
+                "otherValue": 387846046518.53,
+                "timestamp": "1707091200"
+            },
+            {
+                "marketCap": 1806535731763.11,
+                "volume": 45439137951.37,
+                "btcValue": 947822596526.9,
+                "ethValue": 301337204028.04,
+                "stableValue": 135836264045.49,
+                "otherValue": 421539667162.68,
+                "timestamp": "1707696000"
+            },
+            {
+                "marketCap": 1969694654317.08,
+                "volume": 64182744937.96,
+                "btcValue": 1023483888232.42,
+                "ethValue": 346232360557.8,
+                "stableValue": 137087030086.01,
+                "otherValue": 462891375440.85,
+                "timestamp": "1708300800"
+            },
+            {
+                "marketCap": 2000679858530.21,
+                "volume": 52750989868.24,
+                "btcValue": 1015873632234.38,
+                "ethValue": 373989110649.2,
+                "stableValue": 137946031047.92,
+                "otherValue": 472871084598.71,
+                "timestamp": "1708905600"
+            },
+            {
+                "marketCap": 2376725934234.39,
+                "volume": 97597784318.7,
+                "btcValue": 1240260163113.99,
+                "ethValue": 419196077302.38,
+                "stableValue": 140254365333.24,
+                "otherValue": 577015328484.78,
+                "timestamp": "1709510400"
+            },
+            {
+                "marketCap": 2611405017260.58,
+                "volume": 110847085387.27,
+                "btcValue": 1356405043543.31,
+                "ethValue": 466249382572.17,
+                "stableValue": 143799674774.13,
+                "otherValue": 644950916370.97,
+                "timestamp": "1710115200"
+            },
+            {
+                "marketCap": 2593967840121.63,
+                "volume": 128707900338.64,
+                "btcValue": 1343811599798.23,
+                "ethValue": 437351708856.42,
+                "stableValue": 145389627668.44,
+                "otherValue": 667414903798.54,
+                "timestamp": "1710720000"
+            },
+            {
+                "marketCap": 2547654020781.56,
+                "volume": 74750553044.33,
+                "btcValue": 1321558096331.32,
+                "ethValue": 414698079995.29,
+                "stableValue": 146326826914.91,
+                "otherValue": 665071017540.04,
+                "timestamp": "1711324800"
+            },
+            {
+                "marketCap": 2702110380158.71,
+                "volume": 66064724773.37,
+                "btcValue": 1402689092566.44,
+                "ethValue": 437810934730.04,
+                "stableValue": 146984515111.12,
+                "otherValue": 714625837751.11,
+                "timestamp": "1711929600"
+            },
+            {
+                "marketCap": 2595923117967.1,
+                "volume": 63183450187.7,
+                "btcValue": 1364763495263.21,
+                "ethValue": 414715795850.35,
+                "stableValue": 150797650865.67,
+                "otherValue": 665646175987.87,
+                "timestamp": "1712534400"
+            },
+            {
+                "marketCap": 2386104470436.41,
+                "volume": 131235743503.22,
+                "btcValue": 1294288084756.37,
+                "ethValue": 379294977012.52,
+                "stableValue": 151469492624.92,
+                "otherValue": 561051916042.6,
+                "timestamp": "1713139200"
+            },
+            {
+                "marketCap": 2383944533885.66,
+                "volume": 56538236066.74,
+                "btcValue": 1278664985972.18,
+                "ethValue": 378024117789.48,
+                "stableValue": 154765783316.87,
+                "otherValue": 572489646807.13,
+                "timestamp": "1713744000"
+            },
+            {
+                "marketCap": 2347932832710.39,
+                "volume": 50536955388.53,
+                "btcValue": 1242600758895.35,
+                "ethValue": 391788094672.35,
+                "stableValue": 155913280644.44,
+                "otherValue": 557630698498.25,
+                "timestamp": "1714348800"
+            },
+            {
+                "marketCap": 2361950003809.62,
+                "volume": 49878355034.88,
+                "btcValue": 1261092042089.74,
+                "ethValue": 376790068975.02,
+                "stableValue": 155940021187.26,
+                "otherValue": 568127871557.6,
+                "timestamp": "1714953600"
+            },
+            {
+                "marketCap": 2263903579689.51,
+                "volume": 35871621702.28,
+                "btcValue": 1210408472899.22,
+                "ethValue": 351735250126.92,
+                "stableValue": 155258430470.34,
+                "otherValue": 546501426193.03,
+                "timestamp": "1715558400"
+            },
+            {
+                "marketCap": 2395126595314.28,
+                "volume": 50739104392.35,
+                "btcValue": 1305710818288.28,
+                "ethValue": 368911259105.04,
+                "stableValue": 156008822241.08,
+                "otherValue": 564495695679.88,
+                "timestamp": "1716163200"
+            },
+            {
+                "marketCap": 2557829022721.66,
+                "volume": 58994734520.13,
+                "btcValue": 1349270883803.06,
+                "ethValue": 459451648197.47,
+                "stableValue": 155192486313.9,
+                "otherValue": 593914004407.23,
+                "timestamp": "1716768000"
+            },
+            {
+                "marketCap": 2527418313923.05,
+                "volume": 60217613865.99,
+                "btcValue": 1334791730223.26,
+                "ethValue": 454059567509.21,
+                "stableValue": 154936600769.26,
+                "otherValue": 583630415421.32,
+                "timestamp": "1717372800"
+            },
+            {
+                "marketCap": 2549432399899.93,
+                "volume": 48502937747.85,
+                "btcValue": 1372701104270.41,
+                "ethValue": 445266141825.63,
+                "stableValue": 155438658258.03,
+                "otherValue": 576026495545.86,
+                "timestamp": "1717977600"
+            },
+            {
+                "marketCap": 2442288500428.58,
+                "volume": 41936417632.67,
+                "btcValue": 1313622688978.65,
+                "ethValue": 435245992045.32,
+                "stableValue": 155071443636.69,
+                "otherValue": 538348375767.92,
+                "timestamp": "1718582400"
+            },
+            {
+                "marketCap": 2300610267516.85,
+                "volume": 38257668625.89,
+                "btcValue": 1245510028748.32,
+                "ethValue": 418034985196.2,
+                "stableValue": 155356859905.76,
+                "otherValue": 481708393666.57,
+                "timestamp": "1719187200"
+            },
+            {
+                "marketCap": 2306953889585.33,
+                "volume": 45106391467.36,
+                "btcValue": 1235852382455.04,
+                "ethValue": 412555200310.83,
+                "stableValue": 154555413333.42,
+                "otherValue": 503990893486.04,
+                "timestamp": "1719792000"
+            },
+            {
+                "marketCap": 2042484361089.75,
+                "volume": 54899595424.36,
+                "btcValue": 1101333153788.87,
+                "ethValue": 352171586787.5,
+                "stableValue": 155296217629.68,
+                "otherValue": 433683402883.7,
+                "timestamp": "1720396800"
+            },
+            {
+                "marketCap": 2235487391543.43,
+                "volume": 53155204337.2,
+                "btcValue": 1199300594768.74,
+                "ethValue": 390236078923.9,
+                "stableValue": 155821101431.56,
+                "otherValue": 490129616419.23,
+                "timestamp": "1721001600"
+            },
+            {
+                "marketCap": 2480571182912.81,
+                "volume": 66252880041.53,
+                "btcValue": 1344886440697.34,
+                "ethValue": 425141773318,
+                "stableValue": 157495222483.54,
+                "otherValue": 553047746413.93,
+                "timestamp": "1721606400"
+            },
+            {
+                "marketCap": 2422253724674.67,
+                "volume": 44175426500.64,
+                "btcValue": 1346681406569.31,
+                "ethValue": 393287469052.01,
+                "stableValue": 158212051415.08,
+                "otherValue": 524072797638.27,
+                "timestamp": "1722211200"
+            },
+            {
+                "marketCap": 2051299308403.97,
+                "volume": 77898599707.53,
+                "btcValue": 1147492155378.04,
+                "ethValue": 323256625180.84,
+                "stableValue": 157438549945.66,
+                "otherValue": 423111977899.43,
+                "timestamp": "1722816000"
+            },
+            {
+                "marketCap": 2053476248580.97,
+                "volume": 55406204698.3,
+                "btcValue": 1159157943748.57,
+                "ethValue": 307305881529.69,
+                "stableValue": 159736666875.01,
+                "otherValue": 427275756427.7,
+                "timestamp": "1723420800"
+            },
+            {
+                "marketCap": 2068731558937.02,
+                "volume": 44999813865.25,
+                "btcValue": 1153999695447.26,
+                "ethValue": 314284314499.1,
+                "stableValue": 161967057522.95,
+                "otherValue": 438480491467.71,
+                "timestamp": "1724025600"
+            },
+            {
+                "marketCap": 2256397901581.43,
+                "volume": 52031370392.99,
+                "btcValue": 1269431486630.42,
+                "ethValue": 330615750563.22,
+                "stableValue": 163942441473.28,
+                "otherValue": 492408222914.51,
+                "timestamp": "1724630400"
+            },
+            {
+                "marketCap": 2009407868097.39,
+                "volume": 52493141460.48,
+                "btcValue": 1131888700144.89,
+                "ethValue": 292007974354.57,
+                "stableValue": 163749154053.37,
+                "otherValue": 421762039544.56,
+                "timestamp": "1725235200"
+            },
+            {
+                "marketCap": 1944195134890.39,
+                "volume": 43214527636.73,
+                "btcValue": 1083672106308.31,
+                "ethValue": 276407776866.05,
+                "stableValue": 163709181621.16,
+                "otherValue": 420406070094.87,
+                "timestamp": "1725840000"
+            },
+            {
+                "marketCap": 2057410658749.32,
+                "volume": 44625319169.99,
+                "btcValue": 1168327910639.66,
+                "ethValue": 278833592648.56,
+                "stableValue": 164893639499.56,
+                "otherValue": 445355515961.54,
+                "timestamp": "1726444800"
+            },
+            {
+                "marketCap": 2213827759436.73,
+                "volume": 54294134911.53,
+                "btcValue": 1256863079284.18,
+                "ethValue": 310760665967.98,
+                "stableValue": 165817914018.93,
+                "otherValue": 480386100165.64,
+                "timestamp": "1727049600"
+            },
+            {
+                "marketCap": 2306181620068.54,
+                "volume": 50991304060.36,
+                "btcValue": 1296512017138.36,
+                "ethValue": 319955773329.94,
+                "stableValue": 166368975558.25,
+                "otherValue": 523344854041.99,
+                "timestamp": "1727654400"
+            },
+            {
+                "marketCap": 2184731052744.7,
+                "volume": 41910520986.21,
+                "btcValue": 1241520281341.04,
+                "ethValue": 293699424107.37,
+                "stableValue": 165655824365.1,
+                "otherValue": 483855522931.19,
+                "timestamp": "1728259200"
+            },
+            {
+                "marketCap": 2192108898362.88,
+                "volume": 48214149945.94,
+                "btcValue": 1242246471591.07,
+                "ethValue": 297029702699.28,
+                "stableValue": 165638966479.84,
+                "otherValue": 487193757592.69,
+                "timestamp": "1728864000"
+            },
+            {
+                "marketCap": 2385197146408.51,
+                "volume": 59020517699.49,
+                "btcValue": 1364358362851.68,
+                "ethValue": 330615502050.91,
+                "stableValue": 165603090507.78,
+                "otherValue": 524620190998.14,
+                "timestamp": "1729468800"
+            },
+            {
+                "marketCap": 2310213765382.02,
+                "volume": 45717624593.94,
+                "btcValue": 1343433228790.56,
+                "ethValue": 301690250569.96,
+                "stableValue": 165204826081.95,
+                "otherValue": 499885459939.55,
+                "timestamp": "1730073600"
+            },
+            {
+                "marketCap": 2291490609534.01,
+                "volume": 75138196433.71,
+                "btcValue": 1359627803938.65,
+                "ethValue": 295797388114.79,
+                "stableValue": 165573896782.96,
+                "otherValue": 470491520697.61,
+                "timestamp": "1730678400"
+            },
+            {
+                "marketCap": 2722276314514.16,
+                "volume": 219211722905.84,
+                "btcValue": 1591228226396.62,
+                "ethValue": 383858288522.65,
+                "stableValue": 164908951149.68,
+                "otherValue": 582280848445.21,
+                "timestamp": "1731283200"
+            },
+            {
+                "marketCap": 3013295825375.71,
+                "volume": 163656874217.17,
+                "btcValue": 1777557883644.15,
+                "ethValue": 370369822887.12,
+                "stableValue": 174908191346.8,
+                "otherValue": 690459927497.64,
+                "timestamp": "1731888000"
+            },
+            {
+                "marketCap": 3340351384919.09,
+                "volume": 200087860671.33,
+                "btcValue": 1937919789263.11,
+                "ethValue": 405047057940.65,
+                "stableValue": 181407832763.88,
+                "otherValue": 815976704951.45,
+                "timestamp": "1732492800"
+            },
+            {
+                "marketCap": 3466836003440.1,
+                "volume": 162612250061.35,
+                "btcValue": 1925186260749.53,
+                "ethValue": 446979515742.75,
+                "stableValue": 183773265801.45,
+                "otherValue": 910896961146.37,
+                "timestamp": "1733097600"
+            },
+            {
+                "marketCap": 3712940445460.34,
+                "volume": 148776448356.94,
+                "btcValue": 2003052361415.77,
+                "ethValue": 482722188901.5,
+                "stableValue": 193997866787.33,
+                "otherValue": 1033168028355.74,
+                "timestamp": "1733702400"
+            },
+            {
+                "marketCap": 3699070084343.39,
+                "volume": 136660841482.76,
+                "btcValue": 2067710839352.28,
+                "ethValue": 476669292078.71,
+                "stableValue": 197733269442.36,
+                "otherValue": 956956683470.04,
+                "timestamp": "1734307200"
+            },
+            {
+                "marketCap": 3275157665449.97,
+                "volume": 135225799058.13,
+                "btcValue": 1882818286846.41,
+                "ethValue": 394841311784.02,
+                "stableValue": 197933899834.58,
+                "otherValue": 799564166984.96,
+                "timestamp": "1734912000"
+            },
+            {
+                "marketCap": 3267393362606.53,
+                "volume": 85913433776.13,
+                "btcValue": 1852662380608.51,
+                "ethValue": 403548390424.25,
+                "stableValue": 198064615003.17,
+                "otherValue": 813117976570.6,
+                "timestamp": "1735516800"
+            },
+            {
+                "marketCap": 3498617459363.75,
+                "volume": 82666431723.72,
+                "btcValue": 1947670206110.55,
+                "ethValue": 437918809796.91,
+                "stableValue": 198247731696.73,
+                "otherValue": 914780711759.56,
+                "timestamp": "1736121600"
+            },
+            {
+                "marketCap": 3300218680026.26,
+                "volume": 68690226545.9,
+                "btcValue": 1871784432965.67,
+                "ethValue": 393471389539.68,
+                "stableValue": 198244651577.21,
+                "otherValue": 836718205943.7,
+                "timestamp": "1736726400"
+            },
+            {
+                "marketCap": 3491688992644.81,
+                "volume": 307337808886.32,
+                "btcValue": 2004339974992.24,
+                "ethValue": 387163379313.27,
+                "stableValue": 201476196778.9,
+                "otherValue": 898709441560.4,
+                "timestamp": "1737331200"
+            },
+            {
+                "marketCap": 3512866013502.11,
+                "volume": 83743654722.68,
+                "btcValue": 2033347887766.09,
+                "ethValue": 389650499729.1,
+                "stableValue": 206565481231.73,
+                "otherValue": 883302144775.19,
+                "timestamp": "1737936000"
+            },
+            {
+                "marketCap": 3237065223245.08,
+                "volume": 185765968881.16,
+                "btcValue": 1934691941923.76,
+                "ethValue": 345816076223.9,
+                "stableValue": 208142211596.17,
+                "otherValue": 748414993501.25,
+                "timestamp": "1738540800"
+            },
+            {
+                "marketCap": 3152772812294.35,
+                "volume": 86622684004.34,
+                "btcValue": 1912609205392.55,
+                "ethValue": 316769412489.33,
+                "stableValue": 213374075341.41,
+                "otherValue": 710020119071.06,
+                "timestamp": "1739145600"
+            },
+            {
+                "marketCap": 3191800094884.11,
+                "volume": 59069779871.13,
+                "btcValue": 1905964458616.11,
+                "ethValue": 320938569037.55,
+                "stableValue": 213391127905.54,
+                "otherValue": 751505939324.91,
+                "timestamp": "1739750400"
+            },
+            {
+                "marketCap": 3189407296499.41,
+                "volume": 68801769380.76,
+                "btcValue": 1908822096813.35,
+                "ethValue": 339984644801.49,
+                "stableValue": 214620951618.36,
+                "otherValue": 725979603266.21,
+                "timestamp": "1740355200"
+            },
+            {
+                "marketCap": 3145935962311.2,
+                "volume": 173165786091.94,
+                "btcValue": 1869946560971.97,
+                "ethValue": 303765396867.88,
+                "stableValue": 213300804407.19,
+                "otherValue": 758923200064.16,
+                "timestamp": "1740960000"
+            },
+            {
+                "marketCap": 2649816819071.97,
+                "volume": 84995818327.1,
+                "btcValue": 1601985158222.56,
+                "ethValue": 243415175181.61,
+                "stableValue": 215392175485.67,
+                "otherValue": 589024310182.13,
+                "timestamp": "1741564800"
+            },
+            {
+                "marketCap": 2693217623381.76,
+                "volume": 61942728952.92,
+                "btcValue": 1638032801086.13,
+                "ethValue": 227632740536,
+                "stableValue": 216708311324.37,
+                "otherValue": 610843770435.26,
+                "timestamp": "1742169600"
+            },
+            {
+                "marketCap": 2805913365720.63,
+                "volume": 50244017968.01,
+                "btcValue": 1707260126753.02,
+                "ethValue": 242000414890.81,
+                "stableValue": 218180941580.59,
+                "otherValue": 638471882496.21,
+                "timestamp": "1742774400"
+            },
+            {
+                "marketCap": 2665255723028.77,
+                "volume": 49336236680.84,
+                "btcValue": 1634252144636.24,
+                "ethValue": 217987290293.8,
+                "stableValue": 219167257052.48,
+                "otherValue": 593849031046.25,
+                "timestamp": "1743379200"
+            },
+            {
+                "marketCap": 2485869405665.09,
+                "volume": 94826732931.77,
+                "btcValue": 1554827722324.36,
+                "ethValue": 190552059349.25,
+                "stableValue": 218595034057.26,
+                "otherValue": 521894589934.22,
+                "timestamp": "1743984000"
+            },
+            {
+                "marketCap": 2651914257272.77,
+                "volume": 78157302792.06,
+                "btcValue": 1661800908934.46,
+                "ethValue": 192719168737.17,
+                "stableValue": 218462701649.7,
+                "otherValue": 578931477951.44,
+                "timestamp": "1744588800"
+            },
+            {
+                "marketCap": 2686531790539.74,
+                "volume": 48855810605.29,
+                "btcValue": 1690961388192.23,
+                "ethValue": 191599473222.44,
+                "stableValue": 219350228569.87,
+                "otherValue": 584620700555.2,
+                "timestamp": "1745193600"
+            },
+            {
+                "marketCap": 2941512672805.8,
+                "volume": 60650412067.82,
+                "btcValue": 1862267050542.45,
+                "ethValue": 216334375039.47,
+                "stableValue": 222964445981.73,
+                "otherValue": 639946801242.15,
+                "timestamp": "1745798400"
+            },
+            {
+                "marketCap": 2935729267530.39,
+                "volume": 51135034066.92,
+                "btcValue": 1872836815196.98,
+                "ethValue": 218370949979.71,
+                "stableValue": 226621755193.96,
+                "otherValue": 617899747159.74,
+                "timestamp": "1746403200"
+            },
+            {
+                "marketCap": 3327829196151.48,
+                "volume": 129065852332.33,
+                "btcValue": 2068320913281.17,
+                "ethValue": 303604566568.44,
+                "stableValue": 226490788934.2,
+                "otherValue": 729412927367.67,
+                "timestamp": "1747008000"
+            },
+            {
+                "marketCap": 3365862234590.21,
+                "volume": 122440977924.21,
+                "btcValue": 2115974489238.74,
+                "ethValue": 301782532947.64,
+                "stableValue": 228345572081.83,
+                "otherValue": 719759640322,
+                "timestamp": "1747612800"
+            },
+            {
+                "marketCap": 3425272030195.48,
+                "volume": 103453439172.3,
+                "btcValue": 2166229936752.01,
+                "ethValue": 308086603417.06,
+                "stableValue": 230977613540.85,
+                "otherValue": 719977876485.56,
+                "timestamp": "1748217600"
+            },
+            {
+                "marketCap": 3302646623160.53,
+                "volume": 88111607455.88,
+                "btcValue": 2099807690532.75,
+                "ethValue": 306514728789.75,
+                "stableValue": 230837427289.18,
+                "otherValue": 665486776548.85,
+                "timestamp": "1748822400"
+            },
+            {
+                "marketCap": 3301947743973.64,
+                "volume": 89177750002.44,
+                "btcValue": 2102735565663.25,
+                "ethValue": 303124422897.57,
+                "stableValue": 233422922015.24,
+                "otherValue": 662664833397.58,
+                "timestamp": "1749427200"
+            },
+            {
+                "marketCap": 3287463042469.71,
+                "volume": 81507637580.79,
+                "btcValue": 2098658810813.37,
+                "ethValue": 307565756134.74,
+                "stableValue": 234536284727.67,
+                "otherValue": 646702190793.93,
+                "timestamp": "1750032000"
+            },
+            {
+                "marketCap": 3092059833701.08,
+                "volume": 144566501365.38,
+                "btcValue": 2008086342108.22,
+                "ethValue": 268982170021.54,
+                "stableValue": 234225222354.88,
+                "otherValue": 580766099216.44,
+                "timestamp": "1750636800"
+            },
+            {
+                "marketCap": 3340390617686.81,
+                "volume": 79213143423.58,
+                "btcValue": 2155186577908.27,
+                "ethValue": 301862861186.54,
+                "stableValue": 236139580034.78,
+                "otherValue": 647201598557.22,
+                "timestamp": "1751241600"
+            },
+            {
+                "marketCap": 3368903740745.58,
+                "volume": 82101595211.89,
+                "btcValue": 2172401405519.12,
+                "ethValue": 310370530136.54,
+                "stableValue": 238128147469.92,
+                "otherValue": 648003657620,
+                "timestamp": "1751846400"
+            },
+            {
+                "marketCap": 3716211159114.99,
+                "volume": 122706827701.24,
+                "btcValue": 2369504729933.42,
+                "ethValue": 358897741738.68,
+                "stableValue": 240592248646.86,
+                "otherValue": 747216438796.03,
+                "timestamp": "1752451200"
+            },
+            {
+                "marketCap": 3891487437183.71,
+                "volume": 179671114337.25,
+                "btcValue": 2334262452756.5,
+                "ethValue": 453820047192.88,
+                "stableValue": 244288832520.52,
+                "otherValue": 859116104713.81,
+                "timestamp": "1753056000"
+            },
+            {
+                "marketCap": 3948544615623.41,
+                "volume": 140164426843.02,
+                "btcValue": 2376736800559.72,
+                "ethValue": 467718385573.59,
+                "stableValue": 247584784379.73,
+                "otherValue": 856504645110.37,
+                "timestamp": "1753660800"
+            },
+            {
+                "marketCap": 3703975645932.46,
+                "volume": 106538229871.39,
+                "btcValue": 2273097324034.58,
+                "ethValue": 422155718474.47,
+                "stableValue": 249652871612.81,
+                "otherValue": 759069731810.6,
+                "timestamp": "1754265600"
+            },
+            {
+                "marketCap": 3980340328098.71,
+                "volume": 161383807766.26,
+                "btcValue": 2374521027132.21,
+                "ethValue": 513216726966.44,
+                "stableValue": 252313716318.12,
+                "otherValue": 840288857681.94,
+                "timestamp": "1754870400"
+            },
+            {
+                "marketCap": 3988427090708.63,
+                "volume": 127530322364.43,
+                "btcValue": 2338652822791.29,
+                "ethValue": 540220444457.14,
+                "stableValue": 258751202121.49,
+                "otherValue": 850802621338.71,
+                "timestamp": "1755475200"
+            },
+            {
+                "marketCap": 3952051896250.28,
+                "volume": 200007749171.23,
+                "btcValue": 2259342382799.05,
+                "ethValue": 576928423455.95,
+                "stableValue": 259426282988.5,
+                "otherValue": 856354807006.78,
+                "timestamp": "1756080000"
+            },
+            {
+                "marketCap": 3758950865270.84,
+                "volume": 117896818454.78,
+                "btcValue": 2155769239617.46,
+                "ethValue": 530044432137.17,
+                "stableValue": 264842475258.66,
+                "otherValue": 808294718257.55,
+                "timestamp": "1756684800"
+            },
+            {
+                "marketCap": 3836663835419.05,
+                "volume": 84794676622.46,
+                "btcValue": 2213693344484.5,
+                "ethValue": 519707554415.65,
+                "stableValue": 267188092879.78,
+                "otherValue": 836074843639.12,
+                "timestamp": "1757289600"
+            },
+            {
+                "marketCap": 4032044654711,
+                "volume": 129734731905.19,
+                "btcValue": 2298437625327.81,
+                "ethValue": 556236344498.35,
+                "stableValue": 269995607529.42,
+                "otherValue": 907375077355.42,
+                "timestamp": "1757894400"
+            },
+            {
+                "marketCap": 4019479262530.72,
+                "volume": 104715579283.52,
+                "btcValue": 2296986920584.63,
+                "ethValue": 536869814011.13,
+                "stableValue": 273046081650.34,
+                "otherValue": 912576446284.62,
+                "timestamp": "1758499200"
+            },
+            {
+                "marketCap": 3868622810249.71,
+                "volume": 111808311929.34,
+                "btcValue": 2235880213986.85,
+                "ethValue": 500255030063.27,
+                "stableValue": 276321532764.96,
+                "otherValue": 856166033434.63,
+                "timestamp": "1759104000"
+            },
+            {
+                "marketCap": 4203977685865.46,
+                "volume": 188382223415.84,
+                "btcValue": 2461172748984.45,
+                "ethValue": 545001970783.86,
+                "stableValue": 281202316544.39,
+                "otherValue": 916600649552.76,
+                "timestamp": "1759708800"
+            },
+            {
+                "marketCap": 3902591403361.21,
+                "volume": 262597668722.59,
+                "btcValue": 2294085471492.42,
+                "ethValue": 502030942480.75,
+                "stableValue": 282443118155.09,
+                "otherValue": 824031871232.95,
+                "timestamp": "1760313600"
+            },
+            {
+                "marketCap": 3678341634508.39,
+                "volume": 135742396996.42,
+                "btcValue": 2166556247344.24,
+                "ethValue": 469153448992.38,
+                "stableValue": 284272178430.08,
+                "otherValue": 758359759741.69,
+                "timestamp": "1760918400"
+            },
+            {
+                "marketCap": 3873674588309.92,
+                "volume": 123807275190.99,
+                "btcValue": 2284329603721.6,
+                "ethValue": 501979936102.83,
+                "stableValue": 284385667642.75,
+                "otherValue": 802979380842.74,
+                "timestamp": "1761523200"
+            },
+            {
+                "marketCap": 3723628148439.64,
+                "volume": 104021467218.44,
+                "btcValue": 2205411647056.23,
+                "ethValue": 471656389683.83,
+                "stableValue": 283195903551.24,
+                "otherValue": 763364208148.34,
+                "timestamp": "1762128000"
+            },
+            {
+                "marketCap": 3527376685155.67,
+                "volume": 145822784627.24,
+                "btcValue": 2088914087802.18,
+                "ethValue": 432526143532.9,
+                "stableValue": 282335096071.58,
+                "otherValue": 723601357749.01,
+                "timestamp": "1762732800"
+            },
+            {
+                "marketCap": 3195192164876.78,
+                "volume": 157104836334,
+                "btcValue": 1879064357816.58,
+                "ethValue": 373415488352.71,
+                "stableValue": 283038232127.29,
+                "otherValue": 659674086580.2,
+                "timestamp": "1763337600"
+            },
+            {
+                "marketCap": 2955026694506.42,
+                "volume": 122532435842.49,
+                "btcValue": 1731777228775.48,
+                "ethValue": 338086466090.97,
+                "stableValue": 282343878654.92,
+                "otherValue": 602819120985.05,
+                "timestamp": "1763942400"
+            },
+            {
+                "marketCap": 3000543544243.59,
+                "volume": 139512146787.96,
+                "btcValue": 1738065954491.15,
+                "ethValue": 353606129183.08,
+                "stableValue": 283319060117.26,
+                "otherValue": 625552400452.1,
+                "timestamp": "1764103470"
+            }
+        ],
+        "historicalValues": {
+            "now": {
+                "marketCap": 3000543544243.592
+            },
+            "yesterday": {
+                "marketCap": 2955026694506.42
+            },
+            "lastWeek": {
+                "marketCap": 3126931383746.27
+            },
+            "lastMonth": {
+                "marketCap": 3744347471368.37
+            }
+        },
+        "yearlyPerformance": {
+            "high": {
+                "marketCap": 4276096147344.24,
+                "timestamp": "1759795200"
+            },
+            "low": {
+                "marketCap": 2420957450085.37,
+                "timestamp": "1744156800"
+            }
+        },
+        "thirtyDaysPercentage": -20.36
+    },
+    "status": {
+        "timestamp": "2025-11-25T20:46:22.190Z",
+        "error_code": "0",
+        "error_message": "SUCCESS",
+        "elapsed": "2",
+        "credit_count": 0
+    }
+}

@@ -3,8 +3,8 @@ import { TokenItemDataType } from "@/types/token"
 import { Avatar, AvatarImage } from "@radix-ui/react-avatar"
 import { FC, useEffect, useState } from "react"
 
-import { useRouter } from "next/navigation"
 import { TableCell, TableRow } from "../ui/table"
+import { CopyIconButton } from "../CopyIconButton"
 
 type MetadataType = {
     name: string
@@ -17,10 +17,19 @@ type MetadataType = {
     website?: string
 }
 
+function truncateMiddle(str: string, maxLength: number): string {
+    if (str.length <= maxLength) return str
+    const separator = "..."
+    const sepLen = separator.length
+    const charsToShow = maxLength - sepLen
+    const frontChars = Math.ceil(charsToShow / 2)
+    const backChars = Math.floor(charsToShow / 2)
+    return str.substring(0, frontChars) + separator + str.substring(str.length - backChars)
+}
+
 const TableItem: FC<{ tokenData: TokenItemDataType }> = ({ tokenData }) => {
     const { name, symbol, token, metadataUri, holders, marketCapUsd, volumeUsd, progress } =
         tokenData
-    const router = useRouter()
     const [photo, setPhoto] = useState<string | null>(null)
 
     useEffect(() => {
@@ -47,7 +56,7 @@ const TableItem: FC<{ tokenData: TokenItemDataType }> = ({ tokenData }) => {
     }
 
     const openDetailedPage = () => {
-        router.push(`/tokens/${token}`)
+        window.open(`/tokens/${token}`, "_blank", "noopener,noreferrer")
     }
 
     const progressPercent = progress !== undefined ? (progress * 100).toFixed(2) : "0.00"
@@ -75,7 +84,18 @@ const TableItem: FC<{ tokenData: TokenItemDataType }> = ({ tokenData }) => {
                 </div>
             </TableCell>
 
-            <TableCell>{holders}</TableCell>
+            <TableCell>
+                <div className="flex flex-col gap-1">
+                    <div className="flex items-center gap-2">
+                        <span className="truncate max-w-[140px]">{truncateMiddle(token, 20)}</span>
+                        <CopyIconButton textToCopy={token} />
+                    </div>
+                    <span className="text-xs text-muted-foreground truncate max-w-[140px]">
+                        by {truncateMiddle(tokenData.creator, 15)}
+                    </span>
+                </div>
+            </TableCell>
+
             <TableCell>{formatCurrency(volumeUsd)}</TableCell>
             <TableCell>{formatCurrency(marketCapUsd)}</TableCell>
 

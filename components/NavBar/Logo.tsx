@@ -1,12 +1,10 @@
-import LogoSvg from "@/assets/svg/LogoSvg"
 import { cn } from "@/lib/utils"
 import { SparklesCore } from "../ui/sparkles"
+import { Coins } from "lucide-react"
 
 const Logo = ({ className }: { className?: string }) => {
     return (
         <div className={cn("flex items-center gap-2.5 relative py-3", className)}>
-            <LogoSvg className="size-8.5" />
-
             <div className="w-full absolute inset-0">
                 <SparklesCore
                     id="tsparticlesfullpage"
@@ -18,11 +16,10 @@ const Logo = ({ className }: { className?: string }) => {
                     particleColor="#FFFFFF"
                 />
             </div>
+            <Coins height={32} width={32} />
             <h1 className="text-3xl sm:text-4xl font-bold text-center text-white relative z-20">
                 launch.meme
             </h1>
-
-            <span className="text-xl font-semibold"></span>
         </div>
     )
 }

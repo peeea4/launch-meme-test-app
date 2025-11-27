@@ -7,6 +7,7 @@ import Image from "next/image"
 import { FC } from "react"
 import { Card } from "./ui/card"
 import Link from "next/link"
+import { TinyNumber } from "./UsdPrice"
 
 type HeroTokenCardProps = {
     tokenData: TokenItemDataType
@@ -84,7 +85,8 @@ export const HeroTokenCard: FC<HeroTokenCardProps> = ({ tokenData }) => {
                                     : "text-red-400 font-bold text-[1.07em]"
                             }
                         >
-                            {priceUsd} {Math.random() > 0.5 ? "▲" : "▼"}
+                            <TinyNumber value={priceUsd} />
+                            {Math.random() > 0.5 ? "▲" : "▼"}
                         </span>
                     </div>
                 </div>

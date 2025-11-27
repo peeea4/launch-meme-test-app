@@ -43,7 +43,6 @@ UI launch.meme: тёмная тема, 3D-эффекты, плавные ани�
 
 `channel: pumpfun-mintTokens`
 
-
 ## 🛠 Установка и запуск
 
 ```bash

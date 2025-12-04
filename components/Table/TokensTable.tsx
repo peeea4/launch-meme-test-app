@@ -34,7 +34,7 @@ const TokensTable: FC<{ tokens: WebSocketPushMessage[] }> = memo(({ tokens }) =>
 
                             const uniqueKey = tokenData.token || `token-${index}`
 
-                            return <TableItem key={uniqueKey} tokenData={tokenData} />
+                            return <TableItem key={uniqueKey} tokenData={tokenData} index={index} />
                         })}
                     </TableBody>
                 </Table>
